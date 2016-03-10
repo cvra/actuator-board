@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Volumes/data/working/can-io-board/can-io-board.sch)
-    (date "2016 March 10, Thursday 01:29:02")
+    (date "2016 March 10, Thursday 22:24:51")
     (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -307,12 +307,12 @@
   (libraries
     (library (logical can-io-board-cache)
       (uri /Volumes/data/working/can-io-board/can-io-board-cache.lib))
+    (library (logical _div)
+      (uri /Volumes/data/working/can-io-board/kicad-lib/components/_div.lib))
     (library (logical _connectors)
       (uri /Volumes/data/working/can-io-board/kicad-lib/components/_connectors.lib))
     (library (logical _linear-regulators)
       (uri /Volumes/data/working/can-io-board/kicad-lib/components/_linear-regulators.lib))
-    (library (logical _div)
-      (uri /Volumes/data/working/can-io-board/kicad-lib/components/_div.lib))
     (library (logical device)
       (uri "/Library/Application Support/kicad/library/device.lib"))
     (library (logical conn)
@@ -359,7 +359,7 @@
     (net (code 13) (name /IO_PA7_TIM17CH1_ADC15)
       (node (ref U1) (pin 14))
       (node (ref P2) (pin 8)))
-    (net (code 14) (name /IO_PA8_TIM16CH1_ADC10)
+    (net (code 14) (name /IO_PA6_TIM16CH1_ADC10)
       (node (ref P2) (pin 7))
       (node (ref U1) (pin 13)))
     (net (code 15) (name /SWIO)
