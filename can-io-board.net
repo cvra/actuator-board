@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/mi/workspace/CVRA/can-io-board/can-io-board.sch)
-    (date "2018 October 19, Friday 01:22:19")
+    (date "2018 October 25, Thursday 19:38:12")
     (tool "Eeschema (5.0.1-3-g963ef8bb5)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -124,7 +124,7 @@
       (tstamp 56D64054))
     (comp (ref CONN1)
       (value SWD/DEBUG)
-      (footprint _connectors:_Solder_Pad1.27_7)
+      (footprint Connector_Molex:Molex_PicoBlade_53048-1410_1x07_P1.25mm_Horizontal)
       (datasheet DOCUMENTATION)
       (libsource (lib can-io-board-rescue) (part SWD_DEBUG) (description ""))
       (sheetpath (names /) (tstamps /))
