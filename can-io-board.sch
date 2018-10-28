@@ -192,7 +192,7 @@ F 3 "" H 8900 5500 50  0000 C CNN
 	1    8900 5500
 	1    0    0    -1  
 $EndComp
-Text Label 8150 2900 2    60   ~ 0
+Text Label 7150 2900 0    60   ~ 0
 5V_CAN
 $Comp
 L can-io-board-rescue:C-device C5
@@ -607,7 +607,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 2900 8300 2950
 Wire Wire Line
-	8150 2900 8300 2900
+	7950 2900 8300 2900
 Wire Wire Line
 	9500 2900 9500 2950
 Wire Wire Line
@@ -842,4 +842,18 @@ Wire Wire Line
 Connection ~ 8100 5150
 Wire Wire Line
 	8000 5150 8100 5150
+$Comp
+L Device:D_Schottky_Small D2
+U 1 1 5BD6F803
+P 7850 2900
+F 0 "D2" H 7850 2605 50  0000 C CNN
+F 1 "SBR130S3-7" H 7850 2696 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" V 7850 2900 50  0001 C CNN
+F 3 "~" V 7850 2900 50  0001 C CNN
+F 4 "SBR130S3-7DICT-ND" H 7850 2787 50  0000 C CNN "Digikey"
+	1    7850 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7150 2900 7750 2900
 $EndSCHEMATC
