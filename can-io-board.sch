@@ -8,7 +8,7 @@ Sheet 1 1
 Title "CAN I/O board"
 Date "2018-10-16"
 Rev "B"
-Comp "CVRA"
+Comp "Club Vaudois de Robotique Autonome"
 Comment1 "Author: Patrick Spieler, Michael Spieler"
 Comment2 ""
 Comment3 ""
