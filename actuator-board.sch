@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:can-io-board-cache
+LIBS:actuator-board-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -75,7 +75,7 @@ $EndComp
 Text Notes 9300 2750 0    60   ~ 0
 3.3V
 $Comp
-L can-io-board-rescue:C-device C9
+L actuator-board-rescue:C-device C9
 U 1 1 56D60C22
 P 8300 3100
 F 0 "C9" H 8325 3200 50  0000 L CNN
@@ -86,7 +86,7 @@ F 3 "" H 8300 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C10
+L actuator-board-rescue:C-device C10
 U 1 1 56D60C4F
 P 9500 3100
 F 0 "C10" H 9525 3200 50  0000 L CNN
@@ -145,7 +145,7 @@ F 3 "" H 9750 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C8
+L actuator-board-rescue:C-device C8
 U 1 1 56D610D6
 P 7450 4900
 F 0 "C8" H 7475 5000 50  0000 L CNN
@@ -195,7 +195,7 @@ $EndComp
 Text Label 7150 2900 0    60   ~ 0
 5V_CAN
 $Comp
-L can-io-board-rescue:C-device C5
+L actuator-board-rescue:C-device C5
 U 1 1 56D62888
 P 3600 3800
 F 0 "C5" H 3625 3900 50  0000 L CNN
@@ -206,7 +206,7 @@ F 3 "" H 3600 3800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C1
+L actuator-board-rescue:C-device C1
 U 1 1 56D628FF
 P 3100 3800
 F 0 "C1" H 3125 3900 50  0000 L CNN
@@ -217,7 +217,7 @@ F 3 "" H 3100 3800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C3
+L actuator-board-rescue:C-device C3
 U 1 1 56D6293B
 P 3500 4350
 F 0 "C3" H 3525 4450 50  0000 L CNN
@@ -228,7 +228,7 @@ F 3 "" H 3500 4350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C2
+L actuator-board-rescue:C-device C2
 U 1 1 56D62D2B
 P 3350 3800
 F 0 "C2" H 3375 3900 50  0000 L CNN
@@ -284,7 +284,7 @@ F 3 "" H 3800 3250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C4
+L actuator-board-rescue:C-device C4
 U 1 1 56D635F0
 P 3550 3250
 F 0 "C4" H 3575 3350 50  0000 L CNN
@@ -306,7 +306,7 @@ F 3 "" H 3550 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C6
+L actuator-board-rescue:C-device C6
 U 1 1 56D63ACC
 P 5600 6000
 F 0 "C6" H 5625 6100 50  0000 L CNN
@@ -317,7 +317,7 @@ F 3 "" H 5600 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:C-device C7
+L actuator-board-rescue:C-device C7
 U 1 1 56D63B8B
 P 6300 6000
 F 0 "C7" H 6325 6100 50  0000 L CNN
@@ -339,7 +339,7 @@ F 3 "" H 5950 6250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L can-io-board-rescue:LED D1
+L actuator-board-rescue:LED D1
 U 1 1 56D63FB2
 P 1450 4950
 F 0 "D1" H 1450 5050 50  0000 C CNN
@@ -351,7 +351,7 @@ F 4 "VLMTG1300-GS08CT-ND" H 1500 4750 50  0000 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L can-io-board-rescue:R-device R1
+L actuator-board-rescue:R-device R1
 U 1 1 56D64054
 P 1450 4550
 F 0 "R1" V 1530 4550 50  0000 C CNN
@@ -435,7 +435,7 @@ IO_PB6_I2C1SCL_UART1TX
 Text Label 1800 2100 0    60   ~ 0
 IO_PB7_I2C1SDA_UART1RX
 $Comp
-L can-io-board-rescue:SWD_DEBUG CONN1
+L actuator-board-rescue:SWD_DEBUG CONN1
 U 1 1 56D60ADA
 P 1400 1800
 F 0 "CONN1" H 1400 2250 50  0000 C CNN
@@ -856,4 +856,8 @@ F 4 "SBR130S3-7DICT-ND" H 7850 2787 50  0000 C CNN "Digikey"
 $EndComp
 Wire Wire Line
 	7150 2900 7750 2900
+Wire Wire Line
+	7150 2900 7750 2900
+Text Notes 5050 1700 0    60   ~ 0
+2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor SPI + 2x CS\n1-2 Servo PWM\n1-2 analog input\n1-2 digital input
 $EndSCHEMATC
