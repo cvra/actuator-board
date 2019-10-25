@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:actuator-board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -75,7 +75,7 @@ $EndComp
 Text Notes 9300 2750 0    60   ~ 0
 3.3V
 $Comp
-L actuator-board-rescue:C-device C9
+L Device:C C9
 U 1 1 56D60C22
 P 8300 3100
 F 0 "C9" H 8325 3200 50  0000 L CNN
@@ -86,7 +86,7 @@ F 3 "" H 8300 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C10
+L Device:C C10
 U 1 1 56D60C4F
 P 9500 3100
 F 0 "C10" H 9525 3200 50  0000 L CNN
@@ -145,7 +145,7 @@ F 3 "" H 9750 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C8
+L Device:C C8
 U 1 1 56D610D6
 P 7450 4900
 F 0 "C8" H 7475 5000 50  0000 L CNN
@@ -195,7 +195,7 @@ $EndComp
 Text Label 7150 2900 0    60   ~ 0
 5V_CAN
 $Comp
-L actuator-board-rescue:C-device C5
+L Device:C C5
 U 1 1 56D62888
 P 3600 3800
 F 0 "C5" H 3625 3900 50  0000 L CNN
@@ -206,7 +206,7 @@ F 3 "" H 3600 3800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C1
+L Device:C C1
 U 1 1 56D628FF
 P 3100 3800
 F 0 "C1" H 3125 3900 50  0000 L CNN
@@ -217,7 +217,7 @@ F 3 "" H 3100 3800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C3
+L Device:C C3
 U 1 1 56D6293B
 P 3500 4350
 F 0 "C3" H 3525 4450 50  0000 L CNN
@@ -228,7 +228,7 @@ F 3 "" H 3500 4350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C2
+L Device:C C2
 U 1 1 56D62D2B
 P 3350 3800
 F 0 "C2" H 3375 3900 50  0000 L CNN
@@ -275,16 +275,16 @@ RST
 $Comp
 L power:GND #PWR010
 U 1 1 56D634B2
-P 3800 3250
-F 0 "#PWR010" H 3800 3000 50  0001 C CNN
-F 1 "GND" H 3800 3100 50  0000 C CNN
-F 2 "" H 3800 3250 50  0000 C CNN
-F 3 "" H 3800 3250 50  0000 C CNN
-	1    3800 3250
+P 3850 3250
+F 0 "#PWR010" H 3850 3000 50  0001 C CNN
+F 1 "GND" H 3850 3100 50  0000 C CNN
+F 2 "" H 3850 3250 50  0000 C CNN
+F 3 "" H 3850 3250 50  0000 C CNN
+	1    3850 3250
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C4
+L Device:C C4
 U 1 1 56D635F0
 P 3550 3250
 F 0 "C4" H 3575 3350 50  0000 L CNN
@@ -297,16 +297,16 @@ $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 56D636C6
-P 3550 3450
-F 0 "#PWR011" H 3550 3200 50  0001 C CNN
-F 1 "GND" H 3550 3300 50  0000 C CNN
-F 2 "" H 3550 3450 50  0000 C CNN
-F 3 "" H 3550 3450 50  0000 C CNN
-	1    3550 3450
+P 3550 3400
+F 0 "#PWR011" H 3550 3150 50  0001 C CNN
+F 1 "GND" H 3550 3250 50  0000 C CNN
+F 2 "" H 3550 3400 50  0000 C CNN
+F 3 "" H 3550 3400 50  0000 C CNN
+	1    3550 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C6
+L Device:C C6
 U 1 1 56D63ACC
 P 5600 6000
 F 0 "C6" H 5625 6100 50  0000 L CNN
@@ -317,7 +317,7 @@ F 3 "" H 5600 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:C-device C7
+L Device:C C7
 U 1 1 56D63B8B
 P 6300 6000
 F 0 "C7" H 6325 6100 50  0000 L CNN
@@ -339,7 +339,7 @@ F 3 "" H 5950 6250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L actuator-board-rescue:LED D1
+L Device:LED D1
 U 1 1 56D63FB2
 P 1450 4950
 F 0 "D1" H 1450 5050 50  0000 C CNN
@@ -351,7 +351,7 @@ F 4 "VLMTG1300-GS08CT-ND" H 1500 4750 50  0000 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L actuator-board-rescue:R-device R1
+L Device:R R1
 U 1 1 56D64054
 P 1450 4550
 F 0 "R1" V 1530 4550 50  0000 C CNN
@@ -374,7 +374,7 @@ F 3 "" H 1450 5200 50  0000 C CNN
 $EndComp
 Text Label 1450 4350 0    60   ~ 0
 LED
-Text Label 5450 3500 0    60   ~ 0
+Text Label 5450 4600 0    60   ~ 0
 LED
 $Comp
 L power:VCC #PWR014
@@ -426,16 +426,12 @@ Text Label 5450 4300 0    60   ~ 0
 CAN_TX
 Text Label 5450 5300 0    60   ~ 0
 IO_PB6_I2C1SCL_UART1TX
-Text Label 5450 5400 0    60   ~ 0
-IO_PB7_I2C1SDA_UART1RX
-Text Notes 5550 5100 0    60   ~ 0
-JTRST
+Text Notes 6050 5100 0    60   ~ 0
+(JTRST)
 Text Label 1800 2000 0    60   ~ 0
 IO_PB6_I2C1SCL_UART1TX
-Text Label 1800 2100 0    60   ~ 0
-IO_PB7_I2C1SDA_UART1RX
 $Comp
-L actuator-board-rescue:SWD_DEBUG CONN1
+L _connectors:SWD_DEBUG CONN1
 U 1 1 56D60ADA
 P 1400 1800
 F 0 "CONN1" H 1400 2250 50  0000 C CNN
@@ -445,22 +441,14 @@ F 3 "DOCUMENTATION" H 1400 1750 50  0001 C CNN
 	1    1400 1800
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 5350 3600
-NoConn ~ 5350 3900
 Wire Wire Line
 	5350 3800 5450 3800
-Wire Wire Line
-	5350 3700 5450 3700
 Wire Wire Line
 	5450 4100 5350 4100
 Wire Wire Line
 	5450 4000 5350 4000
 Wire Wire Line
-	1800 2100 1750 2100
-Wire Wire Line
 	1750 2000 1800 2000
-Wire Wire Line
-	5450 5400 5350 5400
 Wire Wire Line
 	5450 5300 5350 5300
 Wire Wire Line
@@ -472,23 +460,17 @@ Wire Wire Line
 Wire Wire Line
 	5350 4400 5450 4400
 Wire Wire Line
-	3400 3100 3550 3100
-Wire Wire Line
 	8100 5050 8200 5050
 Wire Wire Line
 	8100 5150 8200 5150
 Connection ~ 3100 4000
 Connection ~ 3100 3600
-Connection ~ 3500 4200
-Connection ~ 3500 4500
 Wire Wire Line
 	1450 4350 1450 4400
 Wire Wire Line
-	1450 4700 1450 4750
+	1450 4700 1450 4800
 Wire Wire Line
-	1450 5200 1450 5150
-Connection ~ 5600 5850
-Connection ~ 6300 5850
+	1450 5200 1450 5100
 Wire Wire Line
 	6300 5600 6300 5850
 Wire Wire Line
@@ -512,13 +494,8 @@ Wire Wire Line
 	6300 5850 6250 5850
 Wire Wire Line
 	5600 5850 5650 5850
-Connection ~ 3550 3100
 Wire Wire Line
-	3550 3450 3550 3400
-Wire Wire Line
-	3800 3200 3850 3200
-Wire Wire Line
-	3800 3250 3800 3200
+	3850 3250 3850 3200
 Wire Wire Line
 	1750 1900 1800 1900
 Wire Wire Line
@@ -532,13 +509,9 @@ Wire Wire Line
 Wire Wire Line
 	2100 1500 2100 1450
 Wire Wire Line
-	3750 4500 3500 4500
-Wire Wire Line
 	3750 4300 3750 4500
 Wire Wire Line
 	3850 4300 3750 4300
-Wire Wire Line
-	3250 4200 3500 4200
 Connection ~ 3350 4000
 Wire Wire Line
 	3100 4000 3100 3950
@@ -633,25 +606,16 @@ F 4 "497-14700-ND" H 4450 6100 50  0000 C CNN "Digikey"
 	1    4600 4450
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5350 4600
-Wire Wire Line
-	5450 3500 5350 3500
 Wire Wire Line
 	3100 4000 3350 4000
 Wire Wire Line
 	3100 3600 3350 3600
-Wire Wire Line
-	3500 4200 3850 4200
-Wire Wire Line
-	3500 4500 3250 4500
 Wire Wire Line
 	5900 6150 5950 6150
 Wire Wire Line
 	6000 6150 6300 6150
 Wire Wire Line
 	5950 6150 6000 6150
-Wire Wire Line
-	3550 3100 3850 3100
 Wire Wire Line
 	3350 4000 3600 4000
 Wire Wire Line
@@ -685,7 +649,6 @@ F 3 "" H 3850 4550 50  0000 C CNN
 	1    3850 4550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5350 4850
 $Comp
 L power:GND #PWR0101
 U 1 1 5BCD4843
@@ -708,27 +671,8 @@ F 3 "" H 10150 6850 50  0001 C CNN
 	1    10150 6850
 	1    0    0    -1  
 $EndComp
-Text Label 4350 1650 0    60   ~ 0
-PWM2_PA9_TIM1_CH2
-Text Label 4350 1750 0    60   ~ 0
-PWM3_PA10_TIM1_CH3
-Text Label 4350 1550 0    60   ~ 0
-PWM1_PA7_TIM17_CH1
-Text Label 4350 1450 0    60   ~ 0
-PWM0_PA6_TIM16_CH1
-Text Notes 5550 5000 0    60   ~ 0
-JTDO/SWO
-NoConn ~ 5350 5200
-NoConn ~ 5350 5100
-NoConn ~ 5350 5000
-Text Label 6450 1550 0    60   ~ 0
-IO1_PA1
-Text Label 6450 1450 0    60   ~ 0
-IO0_PA0
-Text Label 6450 1650 0    60   ~ 0
-IO2_PA2
-Text Label 6450 1750 0    60   ~ 0
-IO3_PA3
+Text Notes 6050 5000 0    60   ~ 0
+(JTDO/SWO)
 Connection ~ 3850 3600
 Connection ~ 3850 4000
 Wire Wire Line
@@ -740,103 +684,15 @@ Wire Wire Line
 Wire Wire Line
 	5450 3400 5350 3400
 Text Label 5450 4000 0    60   ~ 0
-PWM2_PA9_TIM1_CH2
+SERVO1_PA9_TIM1_CH2
 Text Label 5450 4100 0    60   ~ 0
-PWM3_PA10_TIM1_CH3
+SERVO2_PA10_TIM1_CH3
 Text Label 5450 3800 0    60   ~ 0
-PWM1_PA7_TIM17_CH1
-Text Label 5450 3700 0    60   ~ 0
-PWM0_PA6_TIM16_CH1
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J1
-U 1 1 5BCE6632
-P 5600 1550
-F 0 "J1" H 5650 1867 50  0000 C CNN
-F 1 "CONN_IO" H 5650 1776 50  0000 C CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0871_1x08-1MP_P1.25mm_Horizontal" H 5600 1550 50  0001 C CNN
-F 3 "~" H 5600 1550 50  0001 C CNN
-	1    5600 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5400 1450 4350 1450
-Wire Wire Line
-	4350 1550 5400 1550
-Wire Wire Line
-	5400 1650 4350 1650
-Wire Wire Line
-	5400 1750 4350 1750
-$Comp
-L power:GND #PWR0102
-U 1 1 5BCF9CD0
-P 6050 1750
-F 0 "#PWR0102" H 6050 1500 50  0001 C CNN
-F 1 "GND" H 6050 1600 50  0000 C CNN
-F 2 "" H 6050 1750 50  0000 C CNN
-F 3 "" H 6050 1750 50  0000 C CNN
-	1    6050 1750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 1450 5900 1550
-Wire Wire Line
-	5900 1750 6050 1750
-Connection ~ 5900 1750
-Connection ~ 5900 1550
-Wire Wire Line
-	5900 1550 5900 1650
-Connection ~ 5900 1650
-Wire Wire Line
-	5900 1650 5900 1750
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J2
-U 1 1 5BCFEFB5
-P 7150 1550
-F 0 "J2" H 7200 1867 50  0000 C CNN
-F 1 "CONN_PWM" H 7200 1776 50  0000 C CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0871_1x08-1MP_P1.25mm_Horizontal" H 7150 1550 50  0001 C CNN
-F 3 "~" H 7150 1550 50  0001 C CNN
-	1    7150 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 1450 7450 1550
-Wire Wire Line
-	7450 1750 7600 1750
-Connection ~ 7450 1750
-Connection ~ 7450 1550
-Wire Wire Line
-	7450 1550 7450 1650
-Connection ~ 7450 1650
-Wire Wire Line
-	7450 1650 7450 1750
-$Comp
-L power:GND #PWR0103
-U 1 1 5BD1EF19
-P 7600 1750
-F 0 "#PWR0103" H 7600 1500 50  0001 C CNN
-F 1 "GND" H 7600 1600 50  0000 C CNN
-F 2 "" H 7600 1750 50  0000 C CNN
-F 3 "" H 7600 1750 50  0000 C CNN
-	1    7600 1750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6950 1450 6450 1450
-Wire Wire Line
-	6450 1550 6950 1550
-Wire Wire Line
-	6450 1650 6950 1650
-Wire Wire Line
-	6450 1750 6950 1750
+PUMP2_PA7_TIM17_CH1
 Text Label 5450 3200 0    60   ~ 0
-IO1_PA1
+ANALOG2
 Text Label 5450 3100 0    60   ~ 0
-IO0_PA0
-Text Label 5450 3300 0    60   ~ 0
-IO2_PA2
-Text Label 5450 3400 0    60   ~ 0
-IO3_PA3
+ANALOG1
 Wire Wire Line
 	8100 5050 8100 5150
 Connection ~ 8100 5150
@@ -856,8 +712,54 @@ F 4 "SBR130S3-7DICT-ND" H 7850 2787 50  0000 C CNN "Digikey"
 $EndComp
 Wire Wire Line
 	7150 2900 7750 2900
-Wire Wire Line
-	7150 2900 7750 2900
-Text Notes 5050 1700 0    60   ~ 0
+Text Notes 2350 6300 0    60   ~ 0
 2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor SPI + 2x CS\n1-2 Servo PWM\n1-2 analog input\n1-2 digital input
+Wire Wire Line
+	3400 3100 3550 3100
+Wire Wire Line
+	3250 4500 3750 4500
+Wire Wire Line
+	3250 4200 3850 4200
+NoConn ~ 1750 2100
+Wire Wire Line
+	5350 3700 5450 3700
+Text Label 5450 3700 0    60   ~ 0
+PUMP1_PA6_TIM16_CH1
+Wire Wire Line
+	5350 3600 5450 3600
+Text Label 5450 3500 0    60   ~ 0
+VALVE1
+Text Label 5450 3600 0    60   ~ 0
+VALVE2
+Wire Wire Line
+	5450 3900 5350 3900
+Text Label 5450 5200 0    60   ~ 0
+SPI3_MOSI
+Text Label 5450 5100 0    60   ~ 0
+SPI3_MISO
+Text Label 5450 5000 0    60   ~ 0
+SPI3_SCK
+Wire Wire Line
+	5350 5000 5450 5000
+Wire Wire Line
+	5350 5100 5450 5100
+Wire Wire Line
+	5350 5200 5450 5200
+Text Label 5450 4850 0    60   ~ 0
+VACUUM_SENS1_CS
+Wire Wire Line
+	5350 4850 5450 4850
+Text Label 5450 5400 0    60   ~ 0
+VACUUM_SENS1_CS
+Wire Wire Line
+	5450 5400 5350 5400
+Wire Wire Line
+	5450 4600 5350 4600
+Wire Wire Line
+	5350 3500 5450 3500
+Text Label 7300 4150 0    60   ~ 0
+VACUUM_SENS_RESET
+Connection ~ 3550 3100
+Wire Wire Line
+	3550 3100 3850 3100
 $EndSCHEMATC
