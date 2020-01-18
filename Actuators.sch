@@ -1,0 +1,193 @@
+EESchema Schematic File Version 5
+LIBS:actuator-board-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title "Actuator board"
+Date "2020-01-18"
+Rev "A"
+Comp "Club Vaudois de Robotique Autonome"
+Comment1 "Salah Missri"
+Comment2 "Authors: Patrick Spieler, Michael Spieler, "
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L _power:DRV8847_TSSOP U4
+U 1 1 5E23D2B5
+P 4500 3150
+F 0 "U4" H 4475 4281 50  0000 C CNN
+F 1 "DRV8847_TSSOP" H 4475 4190 50  0000 C CNN
+F 2 "" H 4500 3150 50  0001 C CNN
+F 3 "" H 4500 3150 50  0001 C CNN
+	1    4500 3150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3700 2725
+NoConn ~ 3700 2875
+Text HLabel 4500 2200 0    50   Input ~ 0
+ACTUATOR_POWER
+Text HLabel 3700 2650 0    50   Input ~ 0
+PUMP_IN1
+Text HLabel 3700 2800 0    50   Input ~ 0
+PUMP_IN2
+Text HLabel 3700 3200 0    50   Input ~ 0
+PUMP_ENABLE
+Text HLabel 4425 4625 0    50   Input ~ 0
+SERVO1
+Text HLabel 4425 5350 0    50   Input ~ 0
+SERVO2
+Text HLabel 3700 3550 0    50   Input ~ 0
+I2C_SDA
+Text HLabel 3700 3475 0    50   Input ~ 0
+I2C_SCL
+NoConn ~ 3700 3125
+Text HLabel 8725 2375 0    50   Input ~ 0
+PUMP_LED
+Wire Wire Line
+	8725 2800 8725 2900
+Wire Wire Line
+	8725 3300 8725 3200
+$Comp
+L Device:LED D3
+U 1 1 5E248953
+P 8725 3050
+F 0 "D3" H 8725 3150 50  0000 C CNN
+F 1 "PUMP_LED" H 8725 2925 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8725 3050 50  0001 C CNN
+F 3 "" H 8725 3050 50  0000 C CNN
+F 4 "VLMTG1300-GS08CT-ND" H 8775 2850 50  0000 C CNN "Digikey"
+	1    8725 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5E248954
+P 8725 2650
+F 0 "R6" V 8625 2650 50  0000 C CNN
+F 1 "510" V 8725 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8655 2650 50  0001 C CNN
+F 3 "" H 8725 2650 50  0000 C CNN
+	1    8725 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8725 2375 8725 2500
+Text HLabel 6600 2775 2    50   Input ~ 0
+ACTUATOR_GND
+Text HLabel 4425 4825 0    50   Input ~ 0
+ACTUATOR_GND
+Text HLabel 4425 5550 0    50   Input ~ 0
+ACTUATOR_GND
+$Comp
+L power:GND #PWR027
+U 1 1 5E23997F
+P 8725 3300
+F 0 "#PWR027" H 8725 3050 50  0001 C CNN
+F 1 "GND" H 8730 3127 50  0000 C CNN
+F 2 "" H 8725 3300 50  0001 C CNN
+F 3 "" H 8725 3300 50  0001 C CNN
+	1    8725 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 5E239CA6
+P 4500 3800
+F 0 "#PWR026" H 4500 3550 50  0001 C CNN
+F 1 "GND" H 4505 3627 50  0000 C CNN
+F 2 "" H 4500 3800 50  0001 C CNN
+F 3 "" H 4500 3800 50  0001 C CNN
+	1    4500 3800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5250 2750
+NoConn ~ 5250 2950
+Text HLabel 4425 4725 0    50   Input ~ 0
+ACTUATOR_POWER
+Text HLabel 4425 5450 0    50   Input ~ 0
+ACTUATOR_POWER
+$Comp
+L _connectors:SERVO CONN6
+U 1 1 5E246197
+P 4775 5450
+F 0 "CONN6" H 4993 5503 60  0000 L CNN
+F 1 "SERVO" H 4993 5397 60  0000 L CNN
+F 2 "" H 4775 5450 60  0000 C CNN
+F 3 "" H 4775 5450 60  0000 C CNN
+	1    4775 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L _connectors:SERVO CONN5
+U 1 1 5E2455CC
+P 4775 4725
+F 0 "CONN5" H 4993 4778 60  0000 L CNN
+F 1 "SERVO" H 4993 4672 60  0000 L CNN
+F 2 "" H 4775 4725 60  0000 C CNN
+F 3 "" H 4775 4725 60  0000 C CNN
+	1    4775 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_DC M1
+U 1 1 5E248EAA
+P 5675 2650
+F 0 "M1" V 5775 2825 50  0000 C CNN
+F 1 "Motor_DC" V 5500 2700 50  0000 C CNN
+F 2 "" H 5675 2560 50  0001 C CNN
+F 3 "~" H 5675 2560 50  0001 C CNN
+	1    5675 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Motor:Motor_DC M2
+U 1 1 5E24A20B
+P 5700 3150
+F 0 "M2" V 5800 3325 50  0000 C CNN
+F 1 "Motor_DC" V 5500 3200 50  0000 C CNN
+F 2 "" H 5700 3060 50  0001 C CNN
+F 3 "~" H 5700 3060 50  0001 C CNN
+	1    5700 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 2650 5475 2650
+Wire Wire Line
+	5250 2850 5350 2850
+Wire Wire Line
+	5350 2850 5350 3150
+Wire Wire Line
+	5350 3150 5500 3150
+Wire Wire Line
+	5975 2650 6500 2650
+Wire Wire Line
+	6500 2650 6500 2775
+Wire Wire Line
+	6500 2775 6600 2775
+Wire Wire Line
+	6500 2775 6500 3150
+Wire Wire Line
+	6500 3150 6000 3150
+Connection ~ 6500 2775
+$Comp
+L power:GND #PWR?
+U 1 1 5E260916
+P 5350 3300
+F 0 "#PWR?" H 5350 3050 50  0001 C CNN
+F 1 "GND" H 5355 3127 50  0000 C CNN
+F 2 "" H 5350 3300 50  0001 C CNN
+F 3 "" H 5350 3300 50  0001 C CNN
+	1    5350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3300 5350 3300
+Wire Wire Line
+	5250 3200 5350 3200
+Wire Wire Line
+	5350 3200 5350 3300
+Connection ~ 5350 3300
+$EndSCHEMATC

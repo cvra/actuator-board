@@ -1,16 +1,16 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:actuator-board-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
-Title "CAN I/O board"
-Date "2018-10-16"
-Rev "B"
+Sheet 1 3
+Title "Actuator board"
+Date "2020-01-18"
+Rev "A"
 Comp "Club Vaudois de Robotique Autonome"
-Comment1 "Author: Patrick Spieler, Michael Spieler"
-Comment2 ""
+Comment1 "Salah Missri"
+Comment2 "Authors: Patrick Spieler, Michael Spieler, "
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -60,53 +60,6 @@ F 4 "MAX3051EKA+TCT-ND" H 8850 5400 50  0000 C CNN "Digikey"
 	1    8900 4950
 	1    0    0    -1  
 $EndComp
-$Comp
-L _linear-regulators:MCP1703 U2
-U 1 1 56D60BBA
-P 8900 2900
-F 0 "U2" H 9150 3100 60  0000 C CNN
-F 1 "MCP1703" H 8850 3100 60  0000 C CNN
-F 2 "_div:_MCP1703-SOT-23A" H 8800 3350 60  0001 C CNN
-F 3 "" H 8800 3350 60  0000 C CNN
-F 4 "MCP1703T-3302E/CBCT-ND" H 8900 3200 50  0000 C CNN "Digikey"
-	1    8900 2900
-	1    0    0    -1  
-$EndComp
-Text Notes 9300 2750 0    60   ~ 0
-3.3V
-$Comp
-L Device:C C9
-U 1 1 56D60C22
-P 8300 3100
-F 0 "C9" H 8325 3200 50  0000 L CNN
-F 1 "1uF" H 8325 3000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 8338 2950 50  0001 C CNN
-F 3 "" H 8300 3100 50  0000 C CNN
-	1    8300 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C10
-U 1 1 56D60C4F
-P 9500 3100
-F 0 "C10" H 9525 3200 50  0000 L CNN
-F 1 "22uF" H 9525 3000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9538 2950 50  0001 C CNN
-F 3 "" H 9500 3100 50  0000 C CNN
-	1    9500 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR01
-U 1 1 56D60C84
-P 8900 3350
-F 0 "#PWR01" H 8900 3100 50  0001 C CNN
-F 1 "GND" H 8900 3200 50  0000 C CNN
-F 2 "" H 8900 3350 50  0000 C CNN
-F 3 "" H 8900 3350 50  0000 C CNN
-	1    8900 3350
-	1    0    0    -1  
-$EndComp
 Text Label 10100 4300 2    60   ~ 0
 5V_CAN
 Text Label 10100 5250 2    60   ~ 0
@@ -131,17 +84,6 @@ F 1 "GND" H 9950 5200 50  0000 C CNN
 F 2 "" H 9950 5350 50  0000 C CNN
 F 3 "" H 9950 5350 50  0000 C CNN
 	1    9950 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR04
-U 1 1 56D61015
-P 9750 2900
-F 0 "#PWR04" H 9750 2750 50  0001 C CNN
-F 1 "VCC" H 9750 3050 50  0000 C CNN
-F 2 "" H 9750 2900 50  0000 C CNN
-F 3 "" H 9750 2900 50  0000 C CNN
-	1    9750 2900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -192,8 +134,6 @@ F 3 "" H 8900 5500 50  0000 C CNN
 	1    8900 5500
 	1    0    0    -1  
 $EndComp
-Text Label 7150 2900 0    60   ~ 0
-5V_CAN
 $Comp
 L Device:C C5
 U 1 1 56D62888
@@ -426,8 +366,6 @@ Text Label 5450 4300 0    60   ~ 0
 CAN_TX
 Text Label 5450 5300 0    60   ~ 0
 IO_PB6_I2C1SCL_UART1TX
-Text Notes 6050 5100 0    60   ~ 0
-(JTRST)
 Text Label 1800 2000 0    60   ~ 0
 IO_PB6_I2C1SCL_UART1TX
 $Comp
@@ -549,8 +487,6 @@ Wire Wire Line
 	8100 4950 8200 4950
 Wire Wire Line
 	8100 4850 8200 4850
-Connection ~ 9500 2900
-Connection ~ 8300 2900
 Connection ~ 9750 4850
 Wire Wire Line
 	9600 4850 9750 4850
@@ -568,8 +504,6 @@ Wire Wire Line
 Wire Wire Line
 	9850 4500 9850 4750
 Wire Wire Line
-	10150 4500 9850 4500
-Wire Wire Line
 	9950 5350 10150 5350
 Wire Wire Line
 	9950 4400 10150 4400
@@ -577,23 +511,6 @@ Wire Wire Line
 	10100 4300 10150 4300
 Wire Wire Line
 	10100 5250 10150 5250
-Wire Wire Line
-	8300 2900 8300 2950
-Wire Wire Line
-	7950 2900 8300 2900
-Wire Wire Line
-	9500 2900 9500 2950
-Wire Wire Line
-	9350 2900 9500 2900
-Wire Wire Line
-	9500 3300 9500 3250
-Connection ~ 8900 3300
-Wire Wire Line
-	8300 3300 8900 3300
-Wire Wire Line
-	8300 3250 8300 3300
-Wire Wire Line
-	8900 3250 8900 3300
 $Comp
 L _stm32:STM32F302K8U6 U1
 U 1 1 56D60A29
@@ -627,17 +544,9 @@ Wire Wire Line
 Wire Wire Line
 	7900 4750 8200 4750
 Wire Wire Line
-	9500 2900 9750 2900
-Wire Wire Line
-	8300 2900 8450 2900
-Wire Wire Line
 	9750 4850 9750 5550
 Wire Wire Line
 	9850 4750 9850 5450
-Wire Wire Line
-	8900 3300 9500 3300
-Wire Wire Line
-	8900 3300 8900 3350
 $Comp
 L power:GND #PWR020
 U 1 1 5BC69DE1
@@ -671,16 +580,12 @@ F 3 "" H 10150 6850 50  0001 C CNN
 	1    10150 6850
 	1    0    0    -1  
 $EndComp
-Text Notes 6050 5000 0    60   ~ 0
-(JTDO/SWO)
 Connection ~ 3850 3600
 Connection ~ 3850 4000
 Wire Wire Line
 	5350 3100 5450 3100
 Wire Wire Line
 	5450 3200 5350 3200
-Wire Wire Line
-	5450 3300 5350 3300
 Wire Wire Line
 	5450 3400 5350 3400
 Text Label 5450 4000 0    60   ~ 0
@@ -698,68 +603,368 @@ Wire Wire Line
 Connection ~ 8100 5150
 Wire Wire Line
 	8000 5150 8100 5150
-$Comp
-L Device:D_Schottky_Small D2
-U 1 1 5BD6F803
-P 7850 2900
-F 0 "D2" H 7850 2605 50  0000 C CNN
-F 1 "SBR130S3-7" H 7850 2696 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-323_HandSoldering" V 7850 2900 50  0001 C CNN
-F 3 "~" V 7850 2900 50  0001 C CNN
-F 4 "SBR130S3-7DICT-ND" H 7850 2787 50  0000 C CNN "Digikey"
-	1    7850 2900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7150 2900 7750 2900
 Text Notes 2350 6300 0    60   ~ 0
-2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor SPI + 2x CS\n1-2 Servo PWM\n1-2 analog input\n1-2 digital input
+2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor I2C\n1-2 Servo PWM\n1-2 analog input\n1-2 digital input
 Wire Wire Line
 	3400 3100 3550 3100
 Wire Wire Line
-	3250 4500 3750 4500
+	3250 4500 3500 4500
 Wire Wire Line
-	3250 4200 3850 4200
+	3250 4200 3500 4200
 NoConn ~ 1750 2100
 Wire Wire Line
 	5350 3700 5450 3700
 Text Label 5450 3700 0    60   ~ 0
 PUMP1_PA6_TIM16_CH1
 Wire Wire Line
-	5350 3600 5450 3600
-Text Label 5450 3500 0    60   ~ 0
-VALVE1
-Text Label 5450 3600 0    60   ~ 0
-VALVE2
-Wire Wire Line
-	5450 3900 5350 3900
-Text Label 5450 5200 0    60   ~ 0
-SPI3_MOSI
-Text Label 5450 5100 0    60   ~ 0
-SPI3_MISO
-Text Label 5450 5000 0    60   ~ 0
-SPI3_SCK
-Wire Wire Line
-	5350 5000 5450 5000
-Wire Wire Line
-	5350 5100 5450 5100
-Wire Wire Line
-	5350 5200 5450 5200
-Text Label 5450 4850 0    60   ~ 0
-VACUUM_SENS1_CS
-Wire Wire Line
-	5350 4850 5450 4850
-Text Label 5450 5400 0    60   ~ 0
-VACUUM_SENS1_CS
-Wire Wire Line
-	5450 5400 5350 5400
+	5350 5200 6725 5200
 Wire Wire Line
 	5450 4600 5350 4600
-Wire Wire Line
-	5350 3500 5450 3500
-Text Label 7300 4150 0    60   ~ 0
-VACUUM_SENS_RESET
 Connection ~ 3550 3100
 Wire Wire Line
 	3550 3100 3850 3100
+$Comp
+L power:GND #PWR01
+U 1 1 56D60C84
+P 8850 1450
+F 0 "#PWR01" H 8850 1200 50  0001 C CNN
+F 1 "GND" H 9000 1375 50  0000 C CNN
+F 2 "" H 8850 1450 50  0000 C CNN
+F 3 "" H 8850 1450 50  0000 C CNN
+	1    8850 1450
+	1    0    0    -1  
+$EndComp
+Text Label 7100 1000 0    60   ~ 0
+5V_CAN
+$Comp
+L Device:C C10
+U 1 1 56D60C4F
+P 9450 1200
+F 0 "C10" H 9475 1300 50  0000 L CNN
+F 1 "22uF" H 9475 1100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9488 1050 50  0001 C CNN
+F 3 "" H 9450 1200 50  0000 C CNN
+	1    9450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _linear-regulators:MCP1703 U2
+U 1 1 56D60BBA
+P 8850 1000
+F 0 "U2" H 9100 1200 60  0000 C CNN
+F 1 "MCP1703" H 8800 1200 60  0000 C CNN
+F 2 "_div:_MCP1703-SOT-23A" H 8750 1450 60  0001 C CNN
+F 3 "" H 8750 1450 60  0000 C CNN
+F 4 "MCP1703T-3302E/CBCT-ND" H 8850 1300 50  0000 C CNN "Digikey"
+	1    8850 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 56D60C22
+P 8250 1200
+F 0 "C9" H 8275 1300 50  0000 L CNN
+F 1 "1uF" H 8275 1100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8288 1050 50  0001 C CNN
+F 3 "" H 8250 1200 50  0000 C CNN
+	1    8250 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 1000 8400 1000
+Wire Wire Line
+	9450 1000 9700 1000
+Wire Wire Line
+	8850 1350 8850 1400
+Wire Wire Line
+	8250 1350 8250 1400
+Wire Wire Line
+	8250 1400 8850 1400
+Connection ~ 8850 1400
+Wire Wire Line
+	9450 1400 9450 1350
+Wire Wire Line
+	9300 1000 9450 1000
+Wire Wire Line
+	9450 1000 9450 1050
+Wire Wire Line
+	7900 1000 8250 1000
+Wire Wire Line
+	8250 1000 8250 1050
+Connection ~ 8250 1000
+Connection ~ 9450 1000
+Wire Wire Line
+	7100 1000 7700 1000
+$Comp
+L Device:D_Schottky_Small D2
+U 1 1 5BD6F803
+P 7800 1000
+F 0 "D2" H 7800 705 50  0000 C CNN
+F 1 "SBR130S3-7" H 7800 796 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" V 7800 1000 50  0001 C CNN
+F 3 "~" V 7800 1000 50  0001 C CNN
+F 4 "SBR130S3-7DICT-ND" H 7800 887 50  0000 C CNN "Digikey"
+	1    7800 1000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 1400 8850 1450
+Wire Wire Line
+	8850 1400 9450 1400
+$Comp
+L power:VCC #PWR04
+U 1 1 56D61015
+P 9700 1000
+F 0 "#PWR04" H 9700 850 50  0001 C CNN
+F 1 "VCC" H 9700 1150 50  0000 C CNN
+F 2 "" H 9700 1000 50  0000 C CNN
+F 3 "" H 9700 1000 50  0000 C CNN
+	1    9700 1000
+	1    0    0    -1  
+$EndComp
+Text Notes 9250 850  0    60   ~ 0
+3.3V
+Text Label 8100 3000 2    60   ~ 0
+LED
+Text Label 8100 3500 2    60   ~ 0
+SERVO1_PA9_TIM1_CH2
+Text Label 8100 3125 2    60   ~ 0
+PUMP_ENABLE
+Wire Wire Line
+	9850 4500 10150 4500
+Text Label 8100 3250 2    60   ~ 0
+PUMP1_PA6_TIM16_CH1
+Text Label 8100 3375 2    60   ~ 0
+PUMP2_PA7_TIM17_CH1
+Text Label 5450 3400 0    60   ~ 0
+PUMP_ENABLE
+Text Label 6825 5200 0    60   ~ 0
+I2C3_SDA
+Wire Wire Line
+	8250 3250 8100 3250
+Wire Wire Line
+	8100 3375 8250 3375
+Text Label 8100 3600 2    60   ~ 0
+SERVO2_PA10_TIM1_CH3
+Wire Wire Line
+	8100 3600 8250 3600
+Wire Wire Line
+	8250 3500 8100 3500
+Wire Wire Line
+	8250 3125 8100 3125
+Wire Wire Line
+	8100 3000 8250 3000
+Wire Wire Line
+	8250 2750 8100 2750
+$Comp
+L power:VCC #PWR021
+U 1 1 5E237092
+P 6725 3150
+F 0 "#PWR021" H 6725 3000 50  0001 C CNN
+F 1 "VCC" H 6742 3323 50  0000 C CNN
+F 2 "" H 6725 3150 50  0001 C CNN
+F 3 "" H 6725 3150 50  0001 C CNN
+	1    6725 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E237093
+P 6650 3350
+F 0 "R2" H 6500 3450 50  0000 L CNN
+F 1 "4.7k" H 6450 3350 50  0000 L CNN
+F 2 "" H 6650 3350 50  0001 C CNN
+F 3 "~" H 6650 3350 50  0001 C CNN
+	1    6650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5E237094
+P 6725 3350
+F 0 "R3" H 6800 3450 50  0000 L CNN
+F 1 "4.7k" H 6750 3350 50  0000 L CNN
+F 2 "" H 6725 3350 50  0001 C CNN
+F 3 "~" H 6725 3350 50  0001 C CNN
+	1    6725 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6725 3150 6725 3250
+Wire Wire Line
+	6650 3150 6650 3250
+Wire Wire Line
+	6650 3150 6725 3150
+Text Label 6825 3900 0    60   ~ 0
+I2C3_SCL
+Wire Wire Line
+	5350 3900 6650 3900
+Wire Wire Line
+	6650 3450 6650 3900
+Connection ~ 6650 3900
+Wire Wire Line
+	6650 3900 6825 3900
+Wire Wire Line
+	6725 3450 6725 5200
+Connection ~ 6725 5200
+Wire Wire Line
+	6725 5200 6825 5200
+NoConn ~ 5350 5100
+NoConn ~ 5350 5000
+NoConn ~ 5350 4850
+NoConn ~ 5350 5400
+NoConn ~ 5350 3300
+Text Label 8125 2300 2    60   ~ 0
+ANALOG2
+Wire Wire Line
+	8100 3850 8250 3850
+Wire Wire Line
+	8100 3750 8250 3750
+Text Label 8100 3750 2    60   ~ 0
+I2C3_SDA
+Text Label 8100 3850 2    60   ~ 0
+I2C3_SCL
+$Sheet
+S 8250 2675 1500 1500
+U 5E1FB153
+F0 "Actuators" 50
+F1 "Actuators.sch" 50
+F2 "PUMP_IN1" I L 8250 3250 50 
+F3 "PUMP_IN2" I L 8250 3375 50 
+F4 "PUMP_POWER" I L 8250 2750 50 
+F5 "PUMP_LED" I L 8250 3000 50 
+F6 "SERVO1" I L 8250 3500 50 
+F7 "SERVO2" I L 8250 3600 50 
+F8 "I2C_SDA" I L 8250 3750 50 
+F9 "I2C_SCL" I L 8250 3850 50 
+F10 "PUMP_ENABLE" I L 8250 3125 50 
+F11 "ACTUATOR_GND" I L 8250 4025 50 
+F12 "SERVO_POWER" I L 8250 2850 50 
+$EndSheet
+$Sheet
+S 8250 1700 1500 775 
+U 5E1FAFCF
+F0 "Sensors" 50
+F1 "Sensors.sch" 50
+F2 "VACUUM_SENS_RST" I L 8250 1950 50 
+F3 "ANALOG_SENS_IN1" I L 8250 2225 50 
+F4 "ANALOG_SENS_IN2" I L 8250 2300 50 
+F5 "SENSORS_POWER" I L 8250 1800 50 
+F6 "SENSORS_GND" I L 8250 2400 50 
+F7 "I2C_SDA" I L 8250 2050 50 
+F8 "I2C_SCL" I L 8250 2125 50 
+$EndSheet
+Text Label 8125 2225 2    60   ~ 0
+ANALOG1
+Wire Wire Line
+	8125 2300 8250 2300
+Wire Wire Line
+	8125 1950 8250 1950
+Text Label 8125 1950 2    60   ~ 0
+VACUUM_SENS_RESET
+Wire Wire Line
+	8100 4025 8250 4025
+$Comp
+L power:GND #PWR025
+U 1 1 5E242FE3
+P 8125 2400
+F 0 "#PWR025" H 8125 2150 50  0001 C CNN
+F 1 "GND" H 8130 2227 50  0000 C CNN
+F 2 "" H 8125 2400 50  0001 C CNN
+F 3 "" H 8125 2400 50  0001 C CNN
+	1    8125 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8125 2400 8250 2400
+Wire Wire Line
+	8125 1800 8250 1800
+$Comp
+L power:VCC #PWR024
+U 1 1 5E2431C7
+P 8125 1800
+F 0 "#PWR024" H 8125 1650 50  0001 C CNN
+F 1 "VCC" H 8142 1973 50  0000 C CNN
+F 2 "" H 8125 1800 50  0001 C CNN
+F 3 "" H 8125 1800 50  0001 C CNN
+	1    8125 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L _connectors:PWR CONN4
+U 1 1 5E236F0F
+P 4500 1600
+F 0 "CONN4" H 4450 1400 50  0000 C CNN
+F 1 "PWR" H 4450 1800 50  0000 C CNN
+F 2 "MODULE" H 4750 1600 50  0001 C CNN
+F 3 "DOCUMENTATION" H 4750 1600 50  0001 C CNN
+	1    4500 1600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR018
+U 1 1 5E237F12
+P 4850 1550
+F 0 "#PWR018" H 4850 1400 50  0001 C CNN
+F 1 "+BATT" H 4865 1723 50  0000 C CNN
+F 2 "" H 4850 1550 50  0001 C CNN
+F 3 "" H 4850 1550 50  0001 C CNN
+	1    4850 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR019
+U 1 1 5E2389EF
+P 4850 1650
+F 0 "#PWR019" H 4850 1500 50  0001 C CNN
+F 1 "-BATT" H 4865 1823 50  0000 C CNN
+F 2 "" H 4850 1650 50  0001 C CNN
+F 3 "" H 4850 1650 50  0001 C CNN
+	1    4850 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR022
+U 1 1 5E23912B
+P 8100 2750
+F 0 "#PWR022" H 8100 2600 50  0001 C CNN
+F 1 "+BATT" H 7950 2850 50  0000 C CNN
+F 2 "" H 8100 2750 50  0001 C CNN
+F 3 "" H 8100 2750 50  0001 C CNN
+	1    8100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR023
+U 1 1 5E239683
+P 8100 4025
+F 0 "#PWR023" H 8100 3875 50  0001 C CNN
+F 1 "-BATT" H 8115 4198 50  0000 C CNN
+F 2 "" H 8100 4025 50  0001 C CNN
+F 3 "" H 8100 4025 50  0001 C CNN
+	1    8100 4025
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8125 2225 8250 2225
+Text Label 8125 2125 2    60   ~ 0
+I2C3_SCL
+Text Label 8125 2050 2    60   ~ 0
+I2C3_SDA
+Wire Wire Line
+	8125 2050 8250 2050
+Wire Wire Line
+	8250 2125 8125 2125
+Text Label 8100 2850 2    60   ~ 0
+5V_CAN
+Wire Wire Line
+	8100 2850 8250 2850
+NoConn ~ 5350 3600
+NoConn ~ 5350 3500
+Connection ~ 3500 4200
+Wire Wire Line
+	3500 4200 3850 4200
+Connection ~ 3500 4500
+Wire Wire Line
+	3500 4500 3750 4500
 $EndSCHEMATC
