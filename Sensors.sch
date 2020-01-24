@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 2 3
 Title "Actuator board"
 Date "2020-01-18"
 Rev "A"
@@ -14,103 +14,369 @@ Comment2 "Authors: Patrick Spieler, Michael Spieler, "
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 4600 2675 0    50   Input ~ 0
-VACUUM_SENS_RST
-Text HLabel 5075 4775 0    50   Input ~ 0
+Text HLabel 3550 2875 0    50   Input ~ 0
+VACUUM_SENS1_RESET
+Text HLabel 3350 4400 0    50   Input ~ 0
 ANALOG_SENS_IN1
-Text HLabel 5075 5175 0    50   Input ~ 0
+Text HLabel 3350 5175 0    50   Input ~ 0
 ANALOG_SENS_IN2
-Text HLabel 4600 2325 0    50   Input ~ 0
+Text HLabel 2650 2525 0    50   Input ~ 0
 I2C_SCL
-Text HLabel 4600 2400 0    50   Input ~ 0
+Text HLabel 2650 2600 0    50   Input ~ 0
 I2C_SDA
-NoConn ~ 4600 2475
-NoConn ~ 5875 2250
-NoConn ~ 5875 2550
-Text HLabel 5150 1850 0    50   Input ~ 0
+NoConn ~ 3550 2675
+NoConn ~ 4825 2450
+NoConn ~ 4825 2750
+Text HLabel 4100 2050 0    50   Input ~ 0
 SENSORS_POWER
-Text HLabel 5250 3300 0    50   Input ~ 0
+Text HLabel 4200 3500 0    50   Input ~ 0
 SENSORS_GND
-$Comp
-L Device:C_Small C11
-U 1 1 5E250C7A
-P 5725 1850
-F 0 "C11" V 5496 1850 50  0000 C CNN
-F 1 "0.1uF" V 5587 1850 50  0000 C CNN
-F 2 "" H 5725 1850 50  0001 C CNN
-F 3 "~" H 5725 1850 50  0001 C CNN
-	1    5725 1850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5250 1850 5625 1850
-Wire Wire Line
-	5250 1850 5150 1850
-Connection ~ 5250 1850
-Text HLabel 5875 1850 2    50   Input ~ 0
+Text HLabel 5200 2350 2    50   Input ~ 0
 SENSORS_GND
-Wire Wire Line
-	5875 1850 5825 1850
-NoConn ~ 4600 2925
+NoConn ~ 3550 3125
 $Comp
 L Device:C_Small C12
 U 1 1 5E251FA3
-P 6150 2400
-F 0 "C12" H 6025 2400 50  0000 C CNN
-F 1 "1nF" H 6300 2400 50  0000 C CNN
-F 2 "" H 6150 2400 50  0001 C CNN
-F 3 "~" H 6150 2400 50  0001 C CNN
-	1    6150 2400
+P 5100 2600
+F 0 "C12" H 4950 2600 50  0000 C CNN
+F 1 "1nF" H 5250 2600 50  0000 C CNN
+F 2 "" H 5100 2600 50  0001 C CNN
+F 3 "~" H 5100 2600 50  0001 C CNN
+	1    5100 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 2550 4925 2550
+Wire Wire Line
+	4925 2550 4925 2500
+Wire Wire Line
+	4925 2500 5100 2500
+Wire Wire Line
+	5100 2700 4925 2700
+Wire Wire Line
+	4925 2700 4925 2650
+Wire Wire Line
+	4925 2650 4825 2650
+NoConn ~ 4825 2975
+Text HLabel 3625 4700 0    50   Input ~ 0
+SENSORS_GND
+$Comp
+L _connectors:ADC_2PIN CONN8
+U 1 1 5E2563B4
+P 4375 5775
+F 0 "CONN8" H 4553 6178 59  0000 L CNN
+F 1 "ADC_2PIN, Molex Picoblade 2 pin" H 4553 6073 59  0000 L CNN
+F 2 "" H 4375 5775 59  0000 C CNN
+F 3 "" H 4375 5775 59  0000 C CNN
+	1    4375 5775
+	1    0    0    -1  
+$EndComp
+Text HLabel 7425 4775 0    50   Input ~ 0
+DIGITAL_IN1
+Text HLabel 7425 4875 0    50   Input ~ 0
+SENSORS_GND
+Text HLabel 7425 5325 0    50   Input ~ 0
+SENSORS_GND
+$Comp
+L _connectors:CONN_2PIN CONN11
+U 1 1 5E2B70AE
+P 7775 5625
+F 0 "CONN11" H 7993 6028 59  0000 L CNN
+F 1 "Digital input 2, Molex Picoblade 2 pin" H 7993 5923 59  0000 L CNN
+F 2 "" H 7775 5625 59  0000 C CNN
+F 3 "" H 7775 5625 59  0000 C CNN
+	1    7775 5625
+	1    0    0    -1  
+$EndComp
+Text HLabel 7425 5225 0    50   Input ~ 0
+DIGITAL_IN2
+NoConn ~ 7100 2675
+Text HLabel 7100 2875 0    50   Input ~ 0
+VACUUM_SENS2_RESET
+Text HLabel 7100 2525 0    50   Input ~ 0
+I2C_SCL
+Text HLabel 7100 2600 0    50   Input ~ 0
+I2C_SDA
+NoConn ~ 8375 2450
+NoConn ~ 8375 2750
+Text HLabel 7650 2050 0    50   Input ~ 0
+SENSORS_POWER
+Text HLabel 7750 3500 0    50   Input ~ 0
+SENSORS_GND
+NoConn ~ 7100 3125
+$Comp
+L Device:C_Small C14
+U 1 1 5E2C4BE4
+P 8650 2600
+F 0 "C14" H 8500 2600 50  0000 C CNN
+F 1 "1nF" H 8800 2600 50  0000 C CNN
+F 2 "" H 8650 2600 50  0001 C CNN
+F 3 "~" H 8650 2600 50  0001 C CNN
+	1    8650 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8375 2550 8475 2550
+Wire Wire Line
+	8475 2550 8475 2500
+Wire Wire Line
+	8475 2500 8650 2500
+Wire Wire Line
+	8650 2700 8475 2700
+Wire Wire Line
+	8475 2700 8475 2650
+Wire Wire Line
+	8475 2650 8375 2650
+NoConn ~ 8375 2975
+Connection ~ 4200 2050
+Wire Wire Line
+	4200 2050 4100 2050
+$Comp
+L _connectors:CONN_2PIN CONN10
+U 1 1 5E2B60FB
+P 7775 5175
+F 0 "CONN10" H 7993 5578 59  0000 L CNN
+F 1 "Digital input 1, Molex Picoblade 2 pin" H 7993 5473 59  0000 L CNN
+F 2 "" H 7775 5175 59  0000 C CNN
+F 3 "" H 7775 5175 59  0000 C CNN
+	1    7775 5175
 	1    0    0    -1  
 $EndComp
 $Comp
 L _sensors:MPRLS0015PA000 U5
 U 1 1 5E2431FF
-P 5250 2650
-F 0 "U5" H 5237 3631 50  0000 C CNN
-F 1 "MPRLS0015PA000" H 5237 3540 50  0000 C CNN
-F 2 "MODULE" H 5350 2000 50  0001 L CNN
-F 3 "Vaccuum pressure sensor" H 5350 2075 50  0001 L CNN
-	1    5250 2650
+P 4200 2850
+F 0 "U5" H 4187 3831 50  0000 C CNN
+F 1 "MPRLS0015PA000" H 4187 3740 50  0000 C CNN
+F 2 "MODULE" H 4300 2200 50  0001 L CNN
+F 3 "Vaccuum pressure sensor" H 4300 2275 50  0001 L CNN
+	1    4200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5E250C7A
+P 5200 2175
+F 0 "C11" H 5050 2250 50  0000 C CNN
+F 1 "0.1uF" H 5025 2175 50  0000 C CNN
+F 2 "" H 5200 2175 50  0001 C CNN
+F 3 "~" H 5200 2175 50  0001 C CNN
+	1    5200 2175
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4200 2050 5200 2050
+Wire Wire Line
+	5200 2050 5200 2075
+Wire Wire Line
+	5200 2275 5200 2350
+$Comp
+L Device:C_Small C13
+U 1 1 5E3021F3
+P 8700 2175
+F 0 "C13" H 8550 2250 50  0000 C CNN
+F 1 "0.1uF" H 8525 2175 50  0000 C CNN
+F 2 "" H 8700 2175 50  0001 C CNN
+F 3 "~" H 8700 2175 50  0001 C CNN
+	1    8700 2175
+	-1   0    0    1   
+$EndComp
+Text HLabel 8700 2350 2    50   Input ~ 0
+SENSORS_GND
+$Comp
+L _sensors:MPRLS0015PA000 U6
+U 1 1 5E2C4BE5
+P 7750 2850
+F 0 "U6" H 7737 3831 50  0000 C CNN
+F 1 "MPRLS0015PA000" H 7737 3740 50  0000 C CNN
+F 2 "MODULE" H 7850 2200 50  0001 L CNN
+F 3 "Vaccuum pressure sensor" H 7850 2275 50  0001 L CNN
+	1    7750 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5875 2350 5975 2350
+	8700 2050 8700 2075
 Wire Wire Line
-	5975 2350 5975 2300
+	7650 2050 8700 2050
 Wire Wire Line
-	5975 2300 6150 2300
+	8700 2275 8700 2350
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5E30B013
+P 3000 2525
+F 0 "TP2" H 3050 2650 39  0000 L CNN
+F 1 "TestPoint I2C_SCL" H 3058 2560 39  0000 L CNN
+F 2 "" H 3200 2525 50  0001 C CNN
+F 3 "~" H 3200 2525 50  0001 C CNN
+	1    3000 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5E309688
+P 2750 2600
+F 0 "TP1" H 2800 2725 39  0000 L CNN
+F 1 "TestPoint I2C_SDA" H 2808 2635 39  0000 L CNN
+F 2 "" H 2950 2600 50  0001 C CNN
+F 3 "~" H 2950 2600 50  0001 C CNN
+	1    2750 2600
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	6150 2500 5975 2500
+	2650 2600 2750 2600
+Connection ~ 2750 2600
 Wire Wire Line
-	5975 2500 5975 2450
+	2750 2600 3550 2600
 Wire Wire Line
-	5975 2450 5875 2450
-NoConn ~ 5875 2775
-Text HLabel 5075 5275 0    50   Input ~ 0
+	2650 2525 3000 2525
+Connection ~ 3000 2525
+Wire Wire Line
+	3000 2525 3550 2525
+$Comp
+L Device:R_Small R6
+U 1 1 5E30EB86
+P 3675 4275
+F 0 "R6" H 3734 4313 39  0000 L CNN
+F 1 "10k" H 3734 4238 39  0000 L CNN
+F 2 "" H 3675 4275 50  0001 C CNN
+F 3 "~" H 3675 4275 50  0001 C CNN
+	1    3675 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5E30F62B
+P 3675 4525
+F 0 "R7" H 3734 4563 39  0000 L CNN
+F 1 "10k" H 3734 4488 39  0000 L CNN
+F 2 "" H 3675 4525 50  0001 C CNN
+F 3 "~" H 3675 4525 50  0001 C CNN
+	1    3675 4525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C16
+U 1 1 5E30FCAA
+P 3400 4525
+F 0 "C16" H 3450 4575 39  0000 L CNN
+F 1 "0.1uF" H 3450 4475 39  0000 L CNN
+F 2 "" H 3400 4525 50  0001 C CNN
+F 3 "~" H 3400 4525 50  0001 C CNN
+	1    3400 4525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3675 4375 3675 4400
+Wire Wire Line
+	3675 4400 3400 4400
+Wire Wire Line
+	3400 4400 3400 4425
+Connection ~ 3675 4400
+Wire Wire Line
+	3675 4400 3675 4425
+Wire Wire Line
+	3400 4625 3400 4650
+Wire Wire Line
+	3400 4650 3675 4650
+Wire Wire Line
+	3675 4650 3675 4625
+Wire Wire Line
+	3675 4650 3675 4700
+Wire Wire Line
+	3675 4700 3625 4700
+Connection ~ 3675 4650
+Text Notes 2325 4550 0    39   ~ 0
+Fc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
+Wire Wire Line
+	3675 4700 4050 4700
+Connection ~ 3675 4700
+Wire Wire Line
+	3875 4175 3675 4175
+Wire Wire Line
+	3350 4400 3400 4400
+Connection ~ 3400 4400
+Text HLabel 3625 5475 0    50   Input ~ 0
 SENSORS_GND
-Text HLabel 5075 4875 0    50   Input ~ 0
-SENSORS_GND
+Text Notes 2325 5325 0    39   ~ 0
+Fc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
+$Comp
+L Device:R_Small R8
+U 1 1 5E315BC9
+P 3675 5050
+F 0 "R8" H 3734 5088 39  0000 L CNN
+F 1 "10k" H 3734 5013 39  0000 L CNN
+F 2 "" H 3675 5050 50  0001 C CNN
+F 3 "~" H 3675 5050 50  0001 C CNN
+	1    3675 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C17
+U 1 1 5E315BCA
+P 3400 5300
+F 0 "C17" H 3450 5350 39  0000 L CNN
+F 1 "0.1uF" H 3450 5250 39  0000 L CNN
+F 2 "" H 3400 5300 50  0001 C CNN
+F 3 "~" H 3400 5300 50  0001 C CNN
+	1    3400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 5E315BCB
+P 3675 5300
+F 0 "R9" H 3734 5338 39  0000 L CNN
+F 1 "10k" H 3734 5263 39  0000 L CNN
+F 2 "" H 3675 5300 50  0001 C CNN
+F 3 "~" H 3675 5300 50  0001 C CNN
+	1    3675 5300
+	1    0    0    -1  
+$EndComp
 $Comp
 L _connectors:ADC_2PIN CONN7
 U 1 1 5E255B96
-P 5425 5175
-F 0 "CONN7" H 5603 5578 59  0000 L CNN
-F 1 "ADC_2PIN" H 5603 5473 59  0000 L CNN
-F 2 "" H 5425 5175 59  0000 C CNN
-F 3 "" H 5425 5175 59  0000 C CNN
-	1    5425 5175
+P 4400 5000
+F 0 "CONN7" H 4578 5403 59  0000 L CNN
+F 1 "ADC_2PIN, Molex Picoblade 2 pin" H 4578 5298 59  0000 L CNN
+F 2 "" H 4400 5000 59  0000 C CNN
+F 3 "" H 4400 5000 59  0000 C CNN
+	1    4400 5000
 	1    0    0    -1  
 $EndComp
-$Comp
-L _connectors:ADC_2PIN CONN8
-U 1 1 5E2563B4
-P 5425 5575
-F 0 "CONN8" H 5603 5978 59  0000 L CNN
-F 1 "ADC_2PIN" H 5603 5873 59  0000 L CNN
-F 2 "" H 5425 5575 59  0000 C CNN
-F 3 "" H 5425 5575 59  0000 C CNN
-	1    5425 5575
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	3875 4600 4050 4600
+Wire Wire Line
+	3875 4175 3875 4600
+Wire Wire Line
+	3675 4950 3875 4950
+Wire Wire Line
+	3875 4950 3875 5375
+Wire Wire Line
+	3875 5375 4025 5375
+Wire Wire Line
+	4025 5475 3675 5475
+Wire Wire Line
+	3400 5400 3400 5425
+Wire Wire Line
+	3400 5425 3675 5425
+Wire Wire Line
+	3675 5425 3675 5475
+Connection ~ 3675 5475
+Wire Wire Line
+	3675 5475 3625 5475
+Wire Wire Line
+	3675 5425 3675 5400
+Connection ~ 3675 5425
+Wire Wire Line
+	3675 5150 3675 5175
+Wire Wire Line
+	3350 5175 3400 5175
+Connection ~ 3675 5175
+Wire Wire Line
+	3675 5175 3675 5200
+Wire Wire Line
+	3400 5200 3400 5175
+Connection ~ 3400 5175
+Wire Wire Line
+	3400 5175 3675 5175
 $EndSCHEMATC
