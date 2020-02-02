@@ -231,32 +231,10 @@ L Motor:Motor_DC M1
 U 1 1 5E248EAA
 P 7450 2150
 F 0 "M1" V 7250 2100 50  0000 C CNN
-F 1 "PUMP1" V 7650 2100 39  0000 C CNN
+F 1 "Pump 1" V 7650 2100 39  0000 C CNN
 F 2 "" H 7450 2060 50  0001 C CNN
 F 3 "~" H 7450 2060 50  0001 C CNN
 	1    7450 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4007 D5
-U 1 1 5E2D59F1
-P 7000 3000
-F 0 "D5" H 7000 2900 50  0000 C CNN
-F 1 "1N4007" H 7000 3100 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 2825 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 3000 50  0001 C CNN
-	1    7000 3000
-	0    1    1    0   
-$EndComp
-$Comp
-L Motor:Motor_DC M4
-U 1 1 5E2BC831
-P 7450 4550
-F 0 "M4" V 7250 4500 50  0000 C CNN
-F 1 "Solenoid 2" V 7650 4500 39  0000 C CNN
-F 2 "" H 7450 4460 50  0001 C CNN
-F 3 "~" H 7450 4460 50  0001 C CNN
-	1    7450 4550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -264,47 +242,12 @@ L Motor:Motor_DC M2
 U 1 1 5E2BC872
 P 7450 3750
 F 0 "M2" V 7250 3700 50  0000 C CNN
-F 1 "PUMP2" V 7650 3700 39  0000 C CNN
+F 1 "Pump 2" V 7650 3700 39  0000 C CNN
 F 2 "" H 7450 3660 50  0001 C CNN
 F 3 "~" H 7450 3660 50  0001 C CNN
 	1    7450 3750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Diode:1N4007 D6
-U 1 1 5E2D9DB9
-P 7000 4600
-F 0 "D6" H 7000 4500 50  0000 C CNN
-F 1 "1N4007" H 7000 4700 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 4425 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 4600 50  0001 C CNN
-	1    7000 4600
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4007 D4
-U 1 1 5E2D5A4A
-P 7000 3800
-F 0 "D4" H 7000 3700 50  0000 C CNN
-F 1 "1N4007" H 7000 3900 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 3625 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 3800 50  0001 C CNN
-	1    7000 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L Motor:Motor_DC M3
-U 1 1 5E24A20B
-P 7450 2950
-F 0 "M3" V 7250 2900 50  0000 C CNN
-F 1 "Solenoid 1" V 7650 2900 39  0000 C CNN
-F 2 "" H 7450 2860 50  0001 C CNN
-F 3 "~" H 7450 2860 50  0001 C CNN
-	1    7450 2950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 2750 7000 2750
 Wire Wire Line
 	5250 2650 6600 2650
 Wire Wire Line
@@ -323,17 +266,6 @@ Wire Wire Line
 	6500 2950 6500 4350
 Wire Wire Line
 	6500 4350 7000 4350
-$Comp
-L Diode:1N4007 D3
-U 1 1 5E2CA0FB
-P 7000 2200
-F 0 "D3" H 7000 2100 50  0000 C CNN
-F 1 "1N4007" H 7000 2300 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 2025 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 2200 50  0001 C CNN
-	1    7000 2200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7000 2050 7000 1950
 Connection ~ 7000 1950
@@ -343,15 +275,6 @@ Wire Wire Line
 	7000 2350 7000 2450
 Wire Wire Line
 	7000 2450 7450 2450
-Wire Wire Line
-	7000 3150 7000 3250
-Wire Wire Line
-	7000 3250 7450 3250
-Wire Wire Line
-	7000 2850 7000 2750
-Connection ~ 7000 2750
-Wire Wire Line
-	7000 2750 7450 2750
 Wire Wire Line
 	7000 3650 7000 3550
 Connection ~ 7000 3550
@@ -370,4 +293,113 @@ Wire Wire Line
 	7000 4750 7000 4850
 Wire Wire Line
 	7000 4850 7450 4850
+$Comp
+L Device:D_Schottky D3
+U 1 1 5E5D4248
+P 7000 2200
+F 0 "D3" H 6950 2100 50  0000 L CNN
+F 1 "STPS1L40ZFY" H 6800 2300 39  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7000 2200 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 2200 50  0001 C CNN
+F 4 "497-17153-1-ND" V 7000 2200 50  0001 C CNN "Digikey"
+	1    7000 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D4
+U 1 1 5E5D7906
+P 7000 3800
+F 0 "D4" H 6950 3700 50  0000 L CNN
+F 1 "STPS1L40ZFY" H 6800 3900 39  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7000 3800 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 3800 50  0001 C CNN
+F 4 "497-17153-1-ND" V 7000 3800 50  0001 C CNN "Digikey"
+	1    7000 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D6
+U 1 1 5E5D9416
+P 7000 4600
+F 0 "D6" H 6950 4500 50  0000 L CNN
+F 1 "STPS1L40ZFY" H 6800 4700 39  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7000 4600 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 4600 50  0001 C CNN
+F 4 "497-17153-1-ND" V 7000 4600 50  0001 C CNN "Digikey"
+	1    7000 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 5E5D5F10
+P 7000 3000
+F 0 "D2" H 6950 2900 50  0000 L CNN
+F 1 "STPS1L40ZFY" H 6800 3100 39  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7000 3000 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 3000 50  0001 C CNN
+F 4 "497-17153-1-ND" V 7000 3000 50  0001 C CNN "Digikey"
+	1    7000 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 3150 7000 3250
+Wire Wire Line
+	7000 3250 7450 3250
+Wire Wire Line
+	7000 2750 7450 2750
+Wire Wire Line
+	5250 2750 7000 2750
+Connection ~ 7000 2750
+Wire Wire Line
+	7000 2850 7000 2750
+$Comp
+L Device:Electromagnetic_Actor L?
+U 1 1 5E5DF558
+P 7450 3050
+F 0 "L?" H 7580 3146 50  0000 L CNN
+F 1 "Solenoid 1" H 7580 3055 50  0000 L CNN
+F 2 "" V 7425 3150 50  0001 C CNN
+F 3 "~" V 7425 3150 50  0001 C CNN
+	1    7450 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2750 7450 2850
+Wire Wire Line
+	7450 3150 7450 3250
+$Comp
+L Device:Electromagnetic_Actor L?
+U 1 1 5E5E309E
+P 7450 4650
+F 0 "L?" H 7580 4746 50  0000 L CNN
+F 1 "Solenoid 2" H 7580 4655 50  0000 L CNN
+F 2 "" V 7425 4750 50  0001 C CNN
+F 3 "~" V 7425 4750 50  0001 C CNN
+	1    7450 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 4350 7450 4450
+Wire Wire Line
+	7450 4750 7450 4850
+Text Notes 7600 2650 0    50   ~ 0
+Actuator 1\n(1A max)
+Wire Notes Line
+	8050 1850 8050 3350
+Wire Notes Line
+	8050 3350 6800 3350
+Wire Notes Line
+	6800 3350 6800 1850
+Wire Notes Line
+	6800 1850 8050 1850
+Wire Notes Line
+	8050 3450 8050 4950
+Wire Notes Line
+	8050 4950 6800 4950
+Wire Notes Line
+	6800 4950 6800 3450
+Wire Notes Line
+	6800 3450 8050 3450
+Text Notes 7600 4250 0    50   ~ 0
+Actuator 2\n(1A max)
 $EndSCHEMATC
