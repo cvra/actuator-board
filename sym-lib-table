@@ -12,4 +12,5 @@
   (lib (name _stm32)(type Legacy)(uri ${KIPRJMOD}/kicad-lib/components/_stm32.lib)(options "")(descr ""))
   (lib (name _wireless)(type Legacy)(uri ${KIPRJMOD}/kicad-lib/components/_wireless.lib)(options "")(descr ""))
   (lib (name _logo)(type Legacy)(uri ${KIPRJMOD}/kicad-lib/components/logo.lib)(options "")(descr ""))
+  (lib (name actuator-board-rescue)(type Legacy)(uri ${KIPRJMOD}/actuator-board-rescue.lib)(options "")(descr ""))
 )

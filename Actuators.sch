@@ -1,6 +1,6 @@
-EESchema Schematic File Version 5
+EESchema Schematic File Version 4
 LIBS:actuator-board-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,40 +14,21 @@ Comment2 "Authors: Patrick Spieler, Michael Spieler, "
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L _power:DRV8847_TSSOP U4
-U 1 1 5E23D2B5
-P 4500 3150
-F 0 "U4" H 4475 4281 50  0000 C CNN
-F 1 "DRV8847PWR, Digikey part 296-53425-1-ND" H 4475 4190 50  0000 C CNN
-F 2 "" H 4500 3150 50  0001 C CNN
-F 3 "" H 4500 3150 50  0001 C CNN
-	1    4500 3150
-	1    0    0    -1  
-$EndComp
-Text HLabel 4425 2200 0    50   Input ~ 0
-ACTUATOR_POWER
 Text HLabel 3700 2650 0    50   Input ~ 0
 PUMP_IN1
-Text HLabel 3700 2725 0    50   Input ~ 0
+Text HLabel 3700 2800 0    50   Input ~ 0
 PUMP_IN2
 Text HLabel 3700 3200 0    50   Input ~ 0
 PUMP_SOLENOID_ENABLE
-Text HLabel 4425 4625 0    50   Input ~ 0
+Text HLabel 4500 5250 0    50   Input ~ 0
 SERVO1
-Text HLabel 4425 5350 0    50   Input ~ 0
+Text HLabel 4500 5800 0    50   Input ~ 0
 SERVO2
 Text HLabel 3700 3550 0    50   Input ~ 0
 I2C_SDA
 Text HLabel 3700 3475 0    50   Input ~ 0
 I2C_SCL
 NoConn ~ 3700 3125
-Text HLabel 6550 4175 2    50   Input ~ 0
-ACTUATOR_GND
-Text HLabel 4425 4825 0    50   Input ~ 0
-ACTUATOR_GND
-Text HLabel 4425 5550 0    50   Input ~ 0
-ACTUATOR_GND
 $Comp
 L power:GND #PWR026
 U 1 1 5E239CA6
@@ -59,58 +40,6 @@ F 3 "" H 4500 3800 50  0001 C CNN
 	1    4500 3800
 	1    0    0    -1  
 $EndComp
-Text HLabel 4425 4725 0    50   Input ~ 0
-SERVO_POWER
-Text HLabel 4425 5450 0    50   Input ~ 0
-SERVO_POWER
-$Comp
-L _connectors:SERVO CONN6
-U 1 1 5E246197
-P 4775 5450
-F 0 "CONN6" H 4993 5503 60  0000 L CNN
-F 1 "SERVO, Molex Picoblade 3 pin" H 4993 5397 60  0000 L CNN
-F 2 "" H 4775 5450 60  0000 C CNN
-F 3 "" H 4775 5450 60  0000 C CNN
-	1    4775 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L _connectors:SERVO CONN5
-U 1 1 5E2455CC
-P 4775 4725
-F 0 "CONN5" H 4993 4778 60  0000 L CNN
-F 1 "SERVO, Molex Picoblade 3 pin" H 4993 4672 60  0000 L CNN
-F 2 "" H 4775 4725 60  0000 C CNN
-F 3 "" H 4775 4725 60  0000 C CNN
-	1    4775 4725
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor:Motor_DC M1
-U 1 1 5E248EAA
-P 5800 2650
-F 0 "M1" V 5900 2825 50  0000 C CNN
-F 1 "Output Connector PUMP1" V 5975 2600 39  0000 C CNN
-F 2 "" H 5800 2560 50  0001 C CNN
-F 3 "~" H 5800 2560 50  0001 C CNN
-	1    5800 2650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Motor:Motor_DC M3
-U 1 1 5E24A20B
-P 5800 3650
-F 0 "M3" V 5900 3825 50  0000 C CNN
-F 1 "Output Connector Solenoid 1" V 5975 3525 39  0000 C CNN
-F 2 "" H 5800 3560 50  0001 C CNN
-F 3 "~" H 5800 3560 50  0001 C CNN
-	1    5800 3650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5250 2650 5575 2650
-Wire Wire Line
-	6100 2650 6150 2650
 $Comp
 L power:GND #PWR0107
 U 1 1 5E260916
@@ -131,152 +60,8 @@ Wire Wire Line
 Connection ~ 5325 3300
 Wire Wire Line
 	5325 3300 5325 3350
-Wire Wire Line
-	5425 2850 5250 2850
-Wire Wire Line
-	5250 2750 5450 2750
-Wire Wire Line
-	6100 3150 6150 3150
-Connection ~ 6500 3150
-Wire Wire Line
-	6500 2650 6500 3150
-Wire Wire Line
-	6500 4175 6550 4175
-Text HLabel 3700 2800 0    50   Input ~ 0
-SOLENOID_IN1
 Text HLabel 3700 2875 0    50   Input ~ 0
 SOLENOID_IN2
-Wire Wire Line
-	6025 2900 6150 2900
-Wire Wire Line
-	6150 2900 6150 2650
-Connection ~ 6150 2650
-Wire Wire Line
-	6150 2650 6500 2650
-Wire Wire Line
-	5725 2900 5575 2900
-Wire Wire Line
-	5575 2900 5575 2650
-Connection ~ 5575 2650
-Wire Wire Line
-	5575 2650 5600 2650
-Wire Wire Line
-	5400 2950 5250 2950
-Wire Wire Line
-	5450 3150 5575 3150
-Wire Wire Line
-	5450 2750 5450 3150
-$Comp
-L Diode:1N4007 D4
-U 1 1 5E2D5A4A
-P 5875 3400
-F 0 "D4" H 5650 3450 50  0000 C CNN
-F 1 "1N4007" H 5875 3475 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5875 3225 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5875 3400 50  0001 C CNN
-	1    5875 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4007 D3
-U 1 1 5E2CA0FB
-P 5875 2900
-F 0 "D3" H 5875 3100 50  0000 C CNN
-F 1 "1N4007" H 5875 2975 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5875 2725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5875 2900 50  0001 C CNN
-	1    5875 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4007 D6
-U 1 1 5E2D9DB9
-P 5875 4400
-F 0 "D6" H 5650 4450 50  0000 C CNN
-F 1 "1N4007" H 5875 4475 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5875 4225 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5875 4400 50  0001 C CNN
-	1    5875 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6150 3150 6150 3400
-Wire Wire Line
-	6150 3400 6025 3400
-Connection ~ 6150 3150
-Wire Wire Line
-	6150 3150 6500 3150
-Wire Wire Line
-	5725 3400 5575 3400
-Wire Wire Line
-	5575 3400 5575 3150
-Connection ~ 5575 3150
-Wire Wire Line
-	5575 3150 5600 3150
-Wire Wire Line
-	5500 3900 5500 3650
-Wire Wire Line
-	6300 3900 6300 3650
-Wire Wire Line
-	6025 4400 6300 4400
-Wire Wire Line
-	5725 4400 5500 4400
-Wire Wire Line
-	5600 4175 5500 4175
-Wire Wire Line
-	5400 2950 5400 4175
-Wire Wire Line
-	5500 4400 5500 4175
-Connection ~ 5500 4175
-Wire Wire Line
-	5500 4175 5400 4175
-Wire Wire Line
-	6100 4175 6300 4175
-Wire Wire Line
-	6300 4175 6300 4400
-Connection ~ 6300 4175
-Wire Wire Line
-	6300 4175 6500 4175
-Wire Wire Line
-	6500 3150 6500 3650
-Wire Wire Line
-	5500 3650 5600 3650
-Wire Wire Line
-	5425 3650 5500 3650
-Wire Wire Line
-	5425 2850 5425 3650
-Connection ~ 5500 3650
-Wire Wire Line
-	6100 3650 6300 3650
-Connection ~ 6300 3650
-Wire Wire Line
-	6300 3650 6500 3650
-Connection ~ 6500 3650
-$Comp
-L Motor:Motor_DC M2
-U 1 1 5E2BC872
-P 5800 3150
-F 0 "M2" V 5900 3325 50  0000 C CNN
-F 1 "Output Connector PUMP2" V 5975 3075 39  0000 C CNN
-F 2 "" H 5800 3060 50  0001 C CNN
-F 3 "~" H 5800 3060 50  0001 C CNN
-	1    5800 3150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Motor:Motor_DC M4
-U 1 1 5E2BC831
-P 5800 4175
-F 0 "M4" V 5900 4350 50  0000 C CNN
-F 1 "Output Connector Solenoid 2" V 5975 4050 39  0000 C CNN
-F 2 "" H 5800 4085 50  0001 C CNN
-F 3 "~" H 5800 4085 50  0001 C CNN
-	1    5800 4175
-	0    -1   -1   0   
-$EndComp
-Connection ~ 6500 4175
-Wire Wire Line
-	6500 3650 6500 4175
 $Comp
 L Device:C_Small C18
 U 1 1 5E2FBBF2
@@ -288,9 +73,6 @@ F 3 "~" H 5175 2325 50  0001 C CNN
 	1    5175 2325
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4500 2200 4425 2200
-Connection ~ 4500 2200
 $Comp
 L power:GND #PWR021
 U 1 1 5E2FC82D
@@ -308,19 +90,284 @@ Wire Wire Line
 	4500 2200 5175 2200
 Wire Wire Line
 	5175 2425 5175 2450
+$Comp
+L Motor:Motor_Servo M5
+U 1 1 5E37BD0B
+P 5000 5350
+F 0 "M5" H 5332 5415 50  0000 L CNN
+F 1 "Motor_Servo" H 5332 5324 50  0000 L CNN
+F 2 "" H 5000 5160 50  0001 C CNN
+F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5160 50  0001 C CNN
+	1    5000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_Servo M6
+U 1 1 5E38464C
+P 5000 5900
+F 0 "M6" H 5332 5965 50  0000 L CNN
+F 1 "Motor_Servo" H 5332 5874 50  0000 L CNN
+F 2 "" H 5000 5710 50  0001 C CNN
+F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5710 50  0001 C CNN
+	1    5000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _power:DRV8847_TSSOP U4
+U 1 1 5E23D2B5
+P 4500 3150
+F 0 "U4" H 3950 4050 50  0000 C CNN
+F 1 "DRV8847PWR" H 4150 3950 50  0000 C CNN
+F 2 "" H 4500 3150 50  0001 C CNN
+F 3 "" H 4500 3150 50  0001 C CNN
+F 4 "296-53425-1-ND" H 4500 3150 50  0001 C CNN "Digikey"
+	1    4500 3150
+	1    0    0    -1  
+$EndComp
+Text HLabel 3700 2725 0    50   Input ~ 0
+SOLENOID_IN1
+$Comp
+L Device:CP C?
+U 1 1 5E3A79F5
+P 3350 5500
+AR Path="/5E3A79F5" Ref="C?"  Part="1" 
+AR Path="/5E1FB153/5E3A79F5" Ref="C15"  Part="1" 
+F 0 "C15" H 3468 5546 50  0000 L CNN
+F 1 "CP" H 3468 5455 50  0000 L CNN
+F 2 "" H 3388 5350 50  0001 C CNN
+F 3 "~" H 3350 5500 50  0001 C CNN
+	1    3350 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3A79FB
+P 3350 5650
+AR Path="/5E3A79FB" Ref="#PWR?"  Part="1" 
+AR Path="/5E1FB153/5E3A79FB" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 3350 5400 50  0001 C CNN
+F 1 "GND" H 3355 5477 50  0000 C CNN
+F 2 "" H 3350 5650 50  0001 C CNN
+F 3 "" H 3350 5650 50  0001 C CNN
+	1    3350 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E3C2833
+P 2600 5350
+F 0 "J1" H 2518 5567 50  0000 C CNN
+F 1 "SERVO PWR" H 2518 5476 50  0000 C CNN
+F 2 "" H 2600 5350 50  0001 C CNN
+F 3 "~" H 2600 5350 50  0001 C CNN
+	1    2600 5350
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	6025 3900 6300 3900
+	2800 5450 3050 5450
 Wire Wire Line
-	5725 3900 5500 3900
+	3050 5450 3050 5650
+Wire Wire Line
+	3050 5650 3350 5650
+Wire Wire Line
+	2800 5350 3350 5350
+Connection ~ 3350 5350
+Wire Wire Line
+	3350 5350 3850 5350
+Connection ~ 3350 5650
+Wire Wire Line
+	3850 5350 3850 5900
+Wire Wire Line
+	3850 5900 4700 5900
+Connection ~ 3850 5350
+Wire Wire Line
+	3850 5350 4700 5350
+$Comp
+L power:GND #PWR?
+U 1 1 5E3D17A5
+P 4700 5450
+AR Path="/5E3D17A5" Ref="#PWR?"  Part="1" 
+AR Path="/5E1FB153/5E3D17A5" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 4700 5200 50  0001 C CNN
+F 1 "GND" H 4705 5277 50  0000 C CNN
+F 2 "" H 4700 5450 50  0001 C CNN
+F 3 "" H 4700 5450 50  0001 C CNN
+	1    4700 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3D4696
+P 4700 6000
+AR Path="/5E3D4696" Ref="#PWR?"  Part="1" 
+AR Path="/5E1FB153/5E3D4696" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 4700 5750 50  0001 C CNN
+F 1 "GND" H 4705 5827 50  0000 C CNN
+F 2 "" H 4700 6000 50  0001 C CNN
+F 3 "" H 4700 6000 50  0001 C CNN
+	1    4700 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5800 4500 5800
+Wire Wire Line
+	4700 5250 4500 5250
+$Comp
+L power:+BATT #PWR0118
+U 1 1 5E3DDDE9
+P 4500 2100
+F 0 "#PWR0118" H 4500 1950 50  0001 C CNN
+F 1 "+BATT" H 4515 2273 50  0000 C CNN
+F 2 "" H 4500 2100 50  0001 C CNN
+F 3 "" H 4500 2100 50  0001 C CNN
+	1    4500 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2200 4500 2100
+Connection ~ 4500 2200
+$Comp
+L Motor:Motor_DC M1
+U 1 1 5E248EAA
+P 7450 2150
+F 0 "M1" V 7250 2100 50  0000 C CNN
+F 1 "PUMP1" V 7650 2100 39  0000 C CNN
+F 2 "" H 7450 2060 50  0001 C CNN
+F 3 "~" H 7450 2060 50  0001 C CNN
+	1    7450 2150
+	1    0    0    -1  
+$EndComp
 $Comp
 L Diode:1N4007 D5
 U 1 1 5E2D59F1
-P 5875 3900
-F 0 "D5" H 5650 3950 50  0000 C CNN
-F 1 "1N4007" H 5875 3975 39  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5875 3725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5875 3900 50  0001 C CNN
-	1    5875 3900
+P 7000 3000
+F 0 "D5" H 7000 2900 50  0000 C CNN
+F 1 "1N4007" H 7000 3100 39  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 2825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 3000 50  0001 C CNN
+	1    7000 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Motor:Motor_DC M4
+U 1 1 5E2BC831
+P 7450 4550
+F 0 "M4" V 7250 4500 50  0000 C CNN
+F 1 "Solenoid 2" V 7650 4500 39  0000 C CNN
+F 2 "" H 7450 4460 50  0001 C CNN
+F 3 "~" H 7450 4460 50  0001 C CNN
+	1    7450 4550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Motor:Motor_DC M2
+U 1 1 5E2BC872
+P 7450 3750
+F 0 "M2" V 7250 3700 50  0000 C CNN
+F 1 "PUMP2" V 7650 3700 39  0000 C CNN
+F 2 "" H 7450 3660 50  0001 C CNN
+F 3 "~" H 7450 3660 50  0001 C CNN
+	1    7450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D6
+U 1 1 5E2D9DB9
+P 7000 4600
+F 0 "D6" H 7000 4500 50  0000 C CNN
+F 1 "1N4007" H 7000 4700 39  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 4425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 4600 50  0001 C CNN
+	1    7000 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D4
+U 1 1 5E2D5A4A
+P 7000 3800
+F 0 "D4" H 7000 3700 50  0000 C CNN
+F 1 "1N4007" H 7000 3900 39  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 3625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 3800 50  0001 C CNN
+	1    7000 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Motor:Motor_DC M3
+U 1 1 5E24A20B
+P 7450 2950
+F 0 "M3" V 7250 2900 50  0000 C CNN
+F 1 "Solenoid 1" V 7650 2900 39  0000 C CNN
+F 2 "" H 7450 2860 50  0001 C CNN
+F 3 "~" H 7450 2860 50  0001 C CNN
+	1    7450 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2750 7000 2750
+Wire Wire Line
+	5250 2650 6600 2650
+Wire Wire Line
+	6600 2650 6600 1950
+Wire Wire Line
+	6600 1950 7000 1950
+Wire Wire Line
+	5250 2850 6600 2850
+Wire Wire Line
+	6600 2850 6600 3550
+Wire Wire Line
+	6600 3550 7000 3550
+Wire Wire Line
+	5250 2950 6500 2950
+Wire Wire Line
+	6500 2950 6500 4350
+Wire Wire Line
+	6500 4350 7000 4350
+$Comp
+L Diode:1N4007 D3
+U 1 1 5E2CA0FB
+P 7000 2200
+F 0 "D3" H 7000 2100 50  0000 C CNN
+F 1 "1N4007" H 7000 2300 39  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7000 2025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7000 2200 50  0001 C CNN
+	1    7000 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 2050 7000 1950
+Connection ~ 7000 1950
+Wire Wire Line
+	7000 1950 7450 1950
+Wire Wire Line
+	7000 2350 7000 2450
+Wire Wire Line
+	7000 2450 7450 2450
+Wire Wire Line
+	7000 3150 7000 3250
+Wire Wire Line
+	7000 3250 7450 3250
+Wire Wire Line
+	7000 2850 7000 2750
+Connection ~ 7000 2750
+Wire Wire Line
+	7000 2750 7450 2750
+Wire Wire Line
+	7000 3650 7000 3550
+Connection ~ 7000 3550
+Wire Wire Line
+	7000 3550 7450 3550
+Wire Wire Line
+	7000 3950 7000 4050
+Wire Wire Line
+	7000 4050 7450 4050
+Wire Wire Line
+	7000 4450 7000 4350
+Connection ~ 7000 4350
+Wire Wire Line
+	7000 4350 7450 4350
+Wire Wire Line
+	7000 4750 7000 4850
+Wire Wire Line
+	7000 4850 7450 4850
 $EndSCHEMATC
