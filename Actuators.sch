@@ -64,7 +64,7 @@ U 1 1 5E37BD0B
 P 5000 5350
 F 0 "M1" H 5332 5415 50  0000 L CNN
 F 1 "Motor_Servo" H 5332 5324 50  0000 L CNN
-F 2 "" H 5000 5160 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5000 5160 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5160 50  0001 C CNN
 	1    5000 5350
 	1    0    0    -1  
@@ -75,7 +75,7 @@ U 1 1 5E38464C
 P 5000 5900
 F 0 "M2" H 5332 5965 50  0000 L CNN
 F 1 "Motor_Servo" H 5332 5874 50  0000 L CNN
-F 2 "" H 5000 5710 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5000 5710 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5710 50  0001 C CNN
 	1    5000 5900
 	1    0    0    -1  
@@ -89,7 +89,7 @@ P 3350 5500
 AR Path="/5E3A79F5" Ref="C?"  Part="1" 
 AR Path="/5E1FB153/5E3A79F5" Ref="C17"  Part="1" 
 F 0 "C17" H 3468 5546 50  0000 L CNN
-F 1 "CP" H 3468 5455 50  0000 L CNN
+F 1 "10uF" H 3468 5455 50  0000 L CNN
 F 2 "" H 3388 5350 50  0001 C CNN
 F 3 "~" H 3350 5500 50  0001 C CNN
 	1    3350 5500
@@ -227,7 +227,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 2350 7000 2450
 Wire Wire Line
-	7000 2450 7450 2450
+	7000 2450 7250 2450
 Wire Wire Line
 	7000 3650 7000 3550
 Connection ~ 7000 3550
@@ -236,7 +236,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 3950 7000 4050
 Wire Wire Line
-	7000 4050 7450 4050
+	7000 4050 7250 4050
 Wire Wire Line
 	7000 4450 7000 4350
 Connection ~ 7000 4350
@@ -245,7 +245,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 4750 7000 4850
 Wire Wire Line
-	7000 4850 7450 4850
+	7000 4850 7250 4850
 $Comp
 L Device:D_Schottky D3
 U 1 1 5E5D4248
@@ -296,8 +296,6 @@ F 4 "497-17153-1-ND" V 7000 3000 50  0001 C CNN "Digikey"
 $EndComp
 Wire Wire Line
 	7000 3150 7000 3250
-Wire Wire Line
-	7000 3250 7450 3250
 Wire Wire Line
 	7000 2750 7450 2750
 Wire Wire Line
@@ -361,7 +359,7 @@ U 1 1 5E3FBC0B
 P 4550 3050
 F 0 "U6" H 4100 3600 50  0000 C CNN
 F 1 "DRV8847_TSSOP" H 4900 3600 50  0000 C CNN
-F 2 "" H 4550 3000 50  0001 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4550 3000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/drv8847.pdf" H 4550 3000 50  0001 C CNN
 	1    4550 3050
 	1    0    0    -1  
@@ -383,7 +381,7 @@ U 1 1 5E2FBBF2
 P 5350 2350
 F 0 "C18" H 5442 2396 50  0000 L CNN
 F 1 "0.1 uF" H 5442 2305 50  0000 L CNN
-F 2 "" H 5350 2350 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5350 2350 50  0001 C CNN
 F 3 "~" H 5350 2350 50  0001 C CNN
 	1    5350 2350
 	1    0    0    -1  
@@ -393,14 +391,72 @@ NoConn ~ 3850 3350
 Text Notes 3050 3700 0    50   ~ 0
 MODE=Hi-Z\nIndependent Bridge Interface
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR0101
 U 1 1 5E4403AD
 P 5350 2250
-F 0 "#PWR?" H 5350 2100 50  0001 C CNN
+F 0 "#PWR0101" H 5350 2100 50  0001 C CNN
 F 1 "+BATT" H 5365 2423 50  0000 C CNN
 F 2 "" H 5350 2250 50  0001 C CNN
 F 3 "" H 5350 2250 50  0001 C CNN
 	1    5350 2250
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E3F7C81
+P 7250 2450
+F 0 "#PWR0102" H 7250 2200 50  0001 C CNN
+F 1 "GND" H 7255 2277 50  0000 C CNN
+F 2 "" H 7250 2450 50  0001 C CNN
+F 3 "" H 7250 2450 50  0001 C CNN
+	1    7250 2450
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 2450
+Wire Wire Line
+	7250 2450 7450 2450
+Wire Wire Line
+	7000 3250 7250 3250
+$Comp
+L power:GND #PWR0103
+U 1 1 5E3F96C2
+P 7250 3250
+F 0 "#PWR0103" H 7250 3000 50  0001 C CNN
+F 1 "GND" H 7255 3077 50  0000 C CNN
+F 2 "" H 7250 3250 50  0001 C CNN
+F 3 "" H 7250 3250 50  0001 C CNN
+	1    7250 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 3250
+Wire Wire Line
+	7250 3250 7450 3250
+$Comp
+L power:GND #PWR0104
+U 1 1 5E3F9BB4
+P 7250 4050
+F 0 "#PWR0104" H 7250 3800 50  0001 C CNN
+F 1 "GND" H 7255 3877 50  0000 C CNN
+F 2 "" H 7250 4050 50  0001 C CNN
+F 3 "" H 7250 4050 50  0001 C CNN
+	1    7250 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 4050
+Wire Wire Line
+	7250 4050 7450 4050
+$Comp
+L power:GND #PWR0105
+U 1 1 5E3FA1D8
+P 7250 4850
+F 0 "#PWR0105" H 7250 4600 50  0001 C CNN
+F 1 "GND" H 7255 4677 50  0000 C CNN
+F 2 "" H 7250 4850 50  0001 C CNN
+F 3 "" H 7250 4850 50  0001 C CNN
+	1    7250 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 4850
+Wire Wire Line
+	7250 4850 7450 4850
 $EndSCHEMATC

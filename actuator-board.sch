@@ -327,7 +327,7 @@ U 1 1 56D60ADA
 P 1400 1800
 F 0 "CONN1" H 1400 2250 50  0000 C CNN
 F 1 "SWD/DEBUG" H 1400 1350 50  0000 C CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53048-1410_1x07_P1.25mm_Horizontal" H 1400 1750 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53048-0710_1x07_P1.25mm_Horizontal" H 1400 1750 50  0001 C CNN
 F 3 "DOCUMENTATION" H 1400 1750 50  0001 C CNN
 	1    1400 1800
 	-1   0    0    -1  
@@ -796,8 +796,6 @@ Wire Wire Line
 	5450 3500 5350 3500
 Wire Wire Line
 	5350 3600 5450 3600
-Text Label 6200 2650 0    60   ~ 0
-DIGITAL_INPUT2
 Text Label 8100 3100 2    50   ~ 0
 DIGITAL_INPUT2
 Wire Wire Line
@@ -896,94 +894,6 @@ Wire Wire Line
 	8250 3000 8100 3000
 Wire Wire Line
 	8100 3100 8250 3100
-$Comp
-L Device:R_Small R2
-U 1 1 5E2B5517
-P 5450 1500
-F 0 "R2" H 5300 1600 50  0000 L CNN
-F 1 "4.7k" H 5250 1500 50  0000 L CNN
-F 2 "" H 5450 1500 50  0001 C CNN
-F 3 "~" H 5450 1500 50  0001 C CNN
-	1    5450 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 5E2B5518
-P 5550 1500
-F 0 "R3" H 5600 1600 50  0000 L CNN
-F 1 "4.7k" H 5600 1500 50  0000 L CNN
-F 2 "" H 5550 1500 50  0001 C CNN
-F 3 "~" H 5550 1500 50  0001 C CNN
-	1    5550 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR013
-U 1 1 5E2B5516
-P 5500 1350
-F 0 "#PWR013" H 5500 1200 50  0001 C CNN
-F 1 "VCC" H 5517 1523 50  0000 C CNN
-F 2 "" H 5500 1350 50  0001 C CNN
-F 3 "" H 5500 1350 50  0001 C CNN
-	1    5500 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5E516367
-P 5900 1600
-AR Path="/5E1FAFCF/5E516367" Ref="TP?"  Part="1" 
-AR Path="/5E516367" Ref="TP1"  Part="1" 
-F 0 "TP1" H 5950 1750 39  0000 L CNN
-F 1 "TestPoint I2C_SDA" H 5950 1700 39  0000 L CNN
-F 2 "" H 6100 1600 50  0001 C CNN
-F 3 "~" H 6100 1600 50  0001 C CNN
-	1    5900 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5E516361
-P 6000 1750
-AR Path="/5E1FAFCF/5E516361" Ref="TP?"  Part="1" 
-AR Path="/5E516361" Ref="TP2"  Part="1" 
-F 0 "TP2" H 6050 1900 39  0000 L CNN
-F 1 "TestPoint I2C_SCL" H 6050 1850 39  0000 L CNN
-F 2 "" H 6200 1750 50  0001 C CNN
-F 3 "~" H 6200 1750 50  0001 C CNN
-	1    6000 1750
-	1    0    0    -1  
-$EndComp
-Text Label 5200 1750 2    60   ~ 0
-I2C3_SCL
-Text Label 5200 1650 2    60   ~ 0
-I2C3_SDA
-Wire Wire Line
-	5200 1750 5550 1750
-Wire Wire Line
-	5200 1650 5450 1650
-Wire Wire Line
-	5450 1600 5450 1650
-Connection ~ 5450 1650
-Wire Wire Line
-	5450 1650 5900 1650
-Wire Wire Line
-	5550 1600 5550 1750
-Connection ~ 5550 1750
-Wire Wire Line
-	5550 1750 6000 1750
-Wire Wire Line
-	5550 1350 5500 1350
-Connection ~ 5500 1350
-Wire Wire Line
-	5500 1350 5450 1350
-Wire Wire Line
-	5450 1350 5450 1400
-Wire Wire Line
-	5550 1350 5550 1400
-Wire Wire Line
-	5900 1600 5900 1650
 Text Label 6350 5400 0    60   ~ 0
 DIGITAL_INPUT1
 Text Label 5450 5200 0    60   ~ 0
@@ -1040,4 +950,91 @@ Wire Wire Line
 	8200 2050 8200 1950
 Wire Wire Line
 	8100 1950 8200 1950
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E3DC2A8
+P 5500 1600
+AR Path="/5E1FAFCF/5E3DC2A8" Ref="TP?"  Part="1" 
+AR Path="/5E3DC2A8" Ref="TP3"  Part="1" 
+F 0 "TP3" V 5500 1800 50  0000 L CNN
+F 1 "SPI_SCK" V 5500 2000 50  0000 L CNN
+F 2 "" H 5700 1600 50  0001 C CNN
+F 3 "~" H 5700 1600 50  0001 C CNN
+	1    5500 1600
+	0    1    1    0   
+$EndComp
+Text Label 5050 1800 0    60   ~ 0
+SPI_CS2
+Text Label 5050 1700 0    60   ~ 0
+SPI_CS1
+Text Label 5050 1600 0    60   ~ 0
+SPI_SCK
+Text Label 5050 1500 0    60   ~ 0
+SPI_MISO
+Text Label 5050 1400 0    60   ~ 0
+SPI_MOSI
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E3FB967
+P 5500 1400
+AR Path="/5E1FAFCF/5E3FB967" Ref="TP?"  Part="1" 
+AR Path="/5E3FB967" Ref="TP1"  Part="1" 
+F 0 "TP1" V 5500 1600 50  0000 L CNN
+F 1 "SPI_MOSI" V 5500 1800 50  0000 L CNN
+F 2 "" H 5700 1400 50  0001 C CNN
+F 3 "~" H 5700 1400 50  0001 C CNN
+	1    5500 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E401584
+P 5500 1500
+AR Path="/5E1FAFCF/5E401584" Ref="TP?"  Part="1" 
+AR Path="/5E401584" Ref="TP2"  Part="1" 
+F 0 "TP2" V 5500 1700 50  0000 L CNN
+F 1 "SPI_MISO" V 5500 1900 50  0000 L CNN
+F 2 "" H 5700 1500 50  0001 C CNN
+F 3 "~" H 5700 1500 50  0001 C CNN
+	1    5500 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E401823
+P 5500 1700
+AR Path="/5E1FAFCF/5E401823" Ref="TP?"  Part="1" 
+AR Path="/5E401823" Ref="TP4"  Part="1" 
+F 0 "TP4" V 5500 1900 50  0000 L CNN
+F 1 "SPI_CS1" V 5500 2100 50  0000 L CNN
+F 2 "" H 5700 1700 50  0001 C CNN
+F 3 "~" H 5700 1700 50  0001 C CNN
+	1    5500 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E401A3D
+P 5500 1800
+AR Path="/5E1FAFCF/5E401A3D" Ref="TP?"  Part="1" 
+AR Path="/5E401A3D" Ref="TP5"  Part="1" 
+F 0 "TP5" V 5500 2000 50  0000 L CNN
+F 1 "SPI_CS2" V 5500 2200 50  0000 L CNN
+F 2 "" H 5700 1800 50  0001 C CNN
+F 3 "~" H 5700 1800 50  0001 C CNN
+	1    5500 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 1400 5500 1400
+Wire Wire Line
+	5050 1500 5500 1500
+Wire Wire Line
+	5050 1600 5500 1600
+Wire Wire Line
+	5050 1700 5500 1700
+Wire Wire Line
+	5500 1800 5050 1800
+Text Label 6200 2650 0    60   ~ 0
+DIGITAL_INPUT2
 $EndSCHEMATC
