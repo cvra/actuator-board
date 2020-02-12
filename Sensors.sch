@@ -31,8 +31,8 @@ P 7650 4950
 AR Path="/5E2B60FB" Ref="CONN?"  Part="1" 
 AR Path="/5E1FAFCF/5E2B60FB" Ref="CONN7"  Part="1" 
 F 0 "CONN7" H 7868 5353 59  0000 L CNN
-F 1 "Digital input 1, Molex Picoblade 2 pin" H 7868 5248 59  0000 L CNN
-F 2 "" H 7650 4950 59  0001 C CNN
+F 1 "Digital input 1" H 7868 5248 59  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 7650 4950 59  0001 C CNN
 F 3 "" H 7650 4950 59  0000 C CNN
 	1    7650 4950
 	1    0    0    -1  
@@ -66,7 +66,7 @@ U 1 1 5E315BC9
 P 3675 5000
 F 0 "R9" H 3734 5038 39  0000 L CNN
 F 1 "10k" H 3734 4963 39  0000 L CNN
-F 2 "" H 3675 5000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3675 5000 50  0001 C CNN
 F 3 "~" H 3675 5000 50  0001 C CNN
 	1    3675 5000
 	1    0    0    -1  
@@ -88,7 +88,7 @@ U 1 1 5E315BCB
 P 3675 5300
 F 0 "R10" H 3734 5338 39  0000 L CNN
 F 1 "10k" H 3734 5263 39  0000 L CNN
-F 2 "" H 3675 5300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3675 5300 50  0001 C CNN
 F 3 "~" H 3675 5300 50  0001 C CNN
 	1    3675 5300
 	1    0    0    -1  
@@ -99,7 +99,7 @@ U 1 1 5E255B96
 P 4400 4950
 F 0 "CONN6" H 4578 5353 59  0000 L CNN
 F 1 "ANALOG1" H 4578 5248 59  0000 L CNN
-F 2 "" H 4400 4950 59  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4400 4950 59  0001 C CNN
 F 3 "" H 4400 4950 59  0000 C CNN
 	1    4400 4950
 	1    0    0    -1  
@@ -214,7 +214,7 @@ U 1 1 5E30EB86
 P 3650 4200
 F 0 "R7" H 3709 4238 39  0000 L CNN
 F 1 "10k" H 3709 4163 39  0000 L CNN
-F 2 "" H 3650 4200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3650 4200 50  0001 C CNN
 F 3 "~" H 3650 4200 50  0001 C CNN
 	1    3650 4200
 	1    0    0    -1  
@@ -229,7 +229,7 @@ U 1 1 5E30F62B
 P 3650 4500
 F 0 "R8" H 3709 4538 39  0000 L CNN
 F 1 "10k" H 3709 4463 39  0000 L CNN
-F 2 "" H 3650 4500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3650 4500 50  0001 C CNN
 F 3 "~" H 3650 4500 50  0001 C CNN
 	1    3650 4500
 	1    0    0    -1  
@@ -393,16 +393,16 @@ U 1 1 5E2563B4
 P 4400 5750
 F 0 "CONN5" H 4578 6153 59  0000 L CNN
 F 1 "ANALOG2" H 4578 6048 59  0000 L CNN
-F 2 "" H 4400 5750 59  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4400 5750 59  0001 C CNN
 F 3 "" H 4400 5750 59  0000 C CNN
 	1    4400 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3900 5350 4050 5350
-Text Notes 2400 2150 0    50   ~ 0
-Notes:\n- Absolute pressure\n- 0 - 1 atm\n- SPI mode\n- output range: 24bits 10%-90%
-Text Notes 5250 5100 0    50   ~ 0
+Text Notes 2400 2150 0    60   ~ 0
+Notes:\n- Absolute pressure\n- 0-1 atm\n- SPI mode\n- output range: 24bits 10%-90%
+Text Notes 5250 5100 0    60   ~ 0
 Input range = 0-6.6V\nFc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
 Wire Notes Line
 	5050 5600 5150 5600
@@ -410,4 +410,6 @@ Wire Notes Line
 	5150 5600 5150 4400
 Wire Notes Line
 	5150 4400 5050 4400
+Text Notes 7850 4850 0    60   ~ 0
+Input range = 0-3.3V
 $EndSCHEMATC
