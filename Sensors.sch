@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "Actuator board"
-Date "2020-01-18"
-Rev "A"
+Date "2020-02-12"
+Rev "A.4"
 Comp "Club Vaudois de Robotique Autonome"
 Comment1 "Salah Missri"
 Comment2 "Authors: Patrick Spieler, Michael Spieler, "
@@ -18,49 +18,23 @@ Text HLabel 3500 3200 0    50   Input ~ 0
 VACUUM_SENS1_RESET
 Text HLabel 3350 4350 0    50   Input ~ 0
 ANALOG_SENS_IN1
-Text HLabel 3350 5125 0    50   Input ~ 0
+Text HLabel 3350 5150 0    50   Input ~ 0
 ANALOG_SENS_IN2
-$Comp
-L _connectors:ADC_2PIN CONN5
-U 1 1 5E2563B4
-P 4375 5725
-F 0 "CONN5" H 4553 6128 59  0000 L CNN
-F 1 "ADC_2PIN, Molex Picoblade 2 pin" H 4553 6023 59  0000 L CNN
-F 2 "" H 4375 5725 59  0001 C CNN
-F 3 "" H 4375 5725 59  0000 C CNN
-	1    4375 5725
-	1    0    0    -1  
-$EndComp
-Text HLabel 7450 4750 0    50   Input ~ 0
+Text HLabel 7300 4550 0    50   Input ~ 0
 DIGITAL_IN1
-$Comp
-L actuator-board-rescue:CONN_2PIN-_connectors CONN?
-U 1 1 5E2B70AE
-P 7800 5600
-AR Path="/5E2B70AE" Ref="CONN?"  Part="1" 
-AR Path="/5E1FAFCF/5E2B70AE" Ref="CONN8"  Part="1" 
-F 0 "CONN8" H 8018 6003 59  0000 L CNN
-F 1 "Digital input 2, Molex Picoblade 2 pin" H 8018 5898 59  0000 L CNN
-F 2 "" H 7800 5600 59  0001 C CNN
-F 3 "" H 7800 5600 59  0000 C CNN
-	1    7800 5600
-	1    0    0    -1  
-$EndComp
-Text HLabel 7450 5200 0    50   Input ~ 0
-DIGITAL_IN2
 Text HLabel 6950 3200 0    50   Input ~ 0
 VACUUM_SENS2_RESET
 $Comp
 L actuator-board-rescue:CONN_2PIN-_connectors CONN?
 U 1 1 5E2B60FB
-P 7800 5150
+P 7650 4950
 AR Path="/5E2B60FB" Ref="CONN?"  Part="1" 
 AR Path="/5E1FAFCF/5E2B60FB" Ref="CONN7"  Part="1" 
-F 0 "CONN7" H 8018 5553 59  0000 L CNN
-F 1 "Digital input 1, Molex Picoblade 2 pin" H 8018 5448 59  0000 L CNN
-F 2 "" H 7800 5150 59  0001 C CNN
-F 3 "" H 7800 5150 59  0000 C CNN
-	1    7800 5150
+F 0 "CONN7" H 7868 5353 59  0000 L CNN
+F 1 "Digital input 1, Molex Picoblade 2 pin" H 7868 5248 59  0000 L CNN
+F 2 "" H 7650 4950 59  0001 C CNN
+F 3 "" H 7650 4950 59  0000 C CNN
+	1    7650 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -83,44 +57,40 @@ Wire Wire Line
 	3400 4600 3400 4650
 Wire Wire Line
 	3400 4650 3650 4650
-Text Notes 2325 4550 0    39   ~ 0
-Fc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
 Wire Wire Line
 	3350 4350 3400 4350
 Connection ~ 3400 4350
-Text Notes 2325 5325 0    39   ~ 0
-Fc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
 $Comp
 L Device:R_Small R9
 U 1 1 5E315BC9
-P 3675 4975
-F 0 "R9" H 3734 5013 39  0000 L CNN
-F 1 "10k" H 3734 4938 39  0000 L CNN
-F 2 "" H 3675 4975 50  0001 C CNN
-F 3 "~" H 3675 4975 50  0001 C CNN
-	1    3675 4975
+P 3675 5000
+F 0 "R9" H 3734 5038 39  0000 L CNN
+F 1 "10k" H 3734 4963 39  0000 L CNN
+F 2 "" H 3675 5000 50  0001 C CNN
+F 3 "~" H 3675 5000 50  0001 C CNN
+	1    3675 5000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C12
 U 1 1 5E315BCA
-P 3400 5275
-F 0 "C12" H 3450 5325 39  0000 L CNN
-F 1 "0.1uF" H 3450 5225 39  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3400 5275 50  0001 C CNN
-F 3 "~" H 3400 5275 50  0001 C CNN
-	1    3400 5275
+P 3400 5300
+F 0 "C12" H 3450 5350 39  0000 L CNN
+F 1 "0.1uF" H 3450 5250 39  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3400 5300 50  0001 C CNN
+F 3 "~" H 3400 5300 50  0001 C CNN
+	1    3400 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R10
 U 1 1 5E315BCB
-P 3675 5275
-F 0 "R10" H 3734 5313 39  0000 L CNN
-F 1 "10k" H 3734 5238 39  0000 L CNN
-F 2 "" H 3675 5275 50  0001 C CNN
-F 3 "~" H 3675 5275 50  0001 C CNN
-	1    3675 5275
+P 3675 5300
+F 0 "R10" H 3734 5338 39  0000 L CNN
+F 1 "10k" H 3734 5263 39  0000 L CNN
+F 2 "" H 3675 5300 50  0001 C CNN
+F 3 "~" H 3675 5300 50  0001 C CNN
+	1    3675 5300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -128,29 +98,27 @@ L _connectors:ADC_2PIN CONN6
 U 1 1 5E255B96
 P 4400 4950
 F 0 "CONN6" H 4578 5353 59  0000 L CNN
-F 1 "ADC_2PIN, Molex Picoblade 2 pin" H 4578 5248 59  0000 L CNN
+F 1 "ANALOG1" H 4578 5248 59  0000 L CNN
 F 2 "" H 4400 4950 59  0001 C CNN
 F 3 "" H 4400 4950 59  0000 C CNN
 	1    4400 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3875 4550 4050 4550
+	3900 4550 4050 4550
 Wire Wire Line
-	3675 4875 3875 4875
+	3675 4900 3900 4900
 Wire Wire Line
-	3875 4875 3875 5325
+	3900 4900 3900 5350
 Wire Wire Line
-	3875 5325 4025 5325
+	3400 5450 3675 5450
 Wire Wire Line
-	3400 5425 3675 5425
+	3675 5100 3675 5150
 Wire Wire Line
-	3675 5075 3675 5125
+	3350 5150 3400 5150
+Connection ~ 3400 5150
 Wire Wire Line
-	3350 5125 3400 5125
-Connection ~ 3400 5125
-Wire Wire Line
-	3400 5125 3675 5125
+	3400 5150 3675 5150
 $Comp
 L power:VCC #PWR025
 U 1 1 5E4E3256
@@ -198,23 +166,12 @@ $EndComp
 $Comp
 L power:GND #PWR029
 U 1 1 5E4F62EA
-P 7450 4850
-F 0 "#PWR029" H 7450 4600 50  0001 C CNN
-F 1 "GND" H 7455 4677 50  0000 C CNN
-F 2 "" H 7450 4850 50  0001 C CNN
-F 3 "" H 7450 4850 50  0001 C CNN
-	1    7450 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR030
-U 1 1 5E4F6F64
-P 7450 5300
-F 0 "#PWR030" H 7450 5050 50  0001 C CNN
-F 1 "GND" H 7455 5127 50  0000 C CNN
-F 2 "" H 7450 5300 50  0001 C CNN
-F 3 "" H 7450 5300 50  0001 C CNN
-	1    7450 5300
+P 7300 4650
+F 0 "#PWR029" H 7300 4400 50  0001 C CNN
+F 1 "GND" H 7305 4477 50  0000 C CNN
+F 2 "" H 7300 4650 50  0001 C CNN
+F 3 "" H 7300 4650 50  0001 C CNN
+	1    7300 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -232,25 +189,25 @@ Connection ~ 3650 4650
 Wire Wire Line
 	3650 4650 4050 4650
 Wire Wire Line
-	4025 5425 3675 5425
-Connection ~ 3675 5425
+	4050 5450 3675 5450
+Connection ~ 3675 5450
 $Comp
 L power:GND #PWR024
 U 1 1 5E503BBC
-P 3675 5425
-F 0 "#PWR024" H 3675 5175 50  0001 C CNN
-F 1 "GND" H 3680 5252 50  0000 C CNN
-F 2 "" H 3675 5425 50  0001 C CNN
-F 3 "" H 3675 5425 50  0001 C CNN
-	1    3675 5425
+P 3675 5450
+F 0 "#PWR024" H 3675 5200 50  0001 C CNN
+F 1 "GND" H 3680 5277 50  0000 C CNN
+F 2 "" H 3675 5450 50  0001 C CNN
+F 3 "" H 3675 5450 50  0001 C CNN
+	1    3675 5450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3875 4100 3875 4550
+	3900 4100 3900 4550
 Wire Wire Line
 	3650 4300 3650 4350
 Wire Wire Line
-	3875 4100 3650 4100
+	3900 4100 3650 4100
 $Comp
 L Device:R_Small R7
 U 1 1 5E30EB86
@@ -278,14 +235,14 @@ F 3 "~" H 3650 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 5125 3400 5175
+	3400 5150 3400 5200
 Wire Wire Line
-	3400 5375 3400 5425
-Connection ~ 3675 5125
+	3400 5400 3400 5450
+Connection ~ 3675 5150
 Wire Wire Line
-	3675 5125 3675 5175
+	3675 5150 3675 5200
 Wire Wire Line
-	3675 5375 3675 5425
+	3675 5400 3675 5450
 Text HLabel 3500 2600 0    50   Input ~ 0
 SPI_SCK
 Text HLabel 3500 2700 0    50   Input ~ 0
@@ -430,4 +387,27 @@ F 3 "" H 9000 2300 50  0001 C CNN
 	1    9000 2300
 	1    0    0    -1  
 $EndComp
+$Comp
+L _connectors:ADC_2PIN CONN5
+U 1 1 5E2563B4
+P 4400 5750
+F 0 "CONN5" H 4578 6153 59  0000 L CNN
+F 1 "ANALOG2" H 4578 6048 59  0000 L CNN
+F 2 "" H 4400 5750 59  0001 C CNN
+F 3 "" H 4400 5750 59  0000 C CNN
+	1    4400 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5350 4050 5350
+Text Notes 2400 2150 0    50   ~ 0
+Notes:\n- Absolute pressure\n- 0 - 1 atm\n- SPI mode\n- output range: 24bits 10%-90%
+Text Notes 5250 5100 0    50   ~ 0
+Input range = 0-6.6V\nFc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
+Wire Notes Line
+	5050 5600 5150 5600
+Wire Notes Line
+	5150 5600 5150 4400
+Wire Notes Line
+	5150 4400 5050 4400
 $EndSCHEMATC

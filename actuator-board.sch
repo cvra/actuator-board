@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "Actuator board"
-Date "2020-01-25"
-Rev "A.3"
+Date "2020-02-12"
+Rev "A.4"
 Comp "Club Vaudois de Robotique Autonome"
 Comment1 "Salah Missri"
 Comment2 "Authors: Patrick Spieler, Michael Spieler, "
@@ -60,10 +60,6 @@ F 4 "MAX3051EKA+TCT-ND" H 8850 5900 50  0000 C CNN "Digikey"
 	1    8900 5450
 	1    0    0    -1  
 $EndComp
-Text Label 10100 4800 2    60   ~ 0
-5V_CAN
-Text Label 10100 5750 2    60   ~ 0
-5V_CAN
 $Comp
 L power:GND #PWR021
 U 1 1 56D60E25
@@ -335,9 +331,9 @@ $EndComp
 Wire Wire Line
 	5350 3800 5450 3800
 Wire Wire Line
-	5450 4100 5350 4100
+	5800 4100 5350 4100
 Wire Wire Line
-	5450 4000 5350 4000
+	5800 4000 5350 4000
 Wire Wire Line
 	1750 2000 1800 2000
 Wire Wire Line
@@ -451,9 +447,9 @@ Wire Wire Line
 Wire Wire Line
 	9950 4900 10150 4900
 Wire Wire Line
-	10100 4800 10150 4800
+	9950 4800 10150 4800
 Wire Wire Line
-	10100 5750 10150 5750
+	9950 5750 10150 5750
 Wire Wire Line
 	3100 4000 3350 4000
 Wire Wire Line
@@ -515,23 +511,21 @@ Wire Wire Line
 	5350 3100 5450 3100
 Wire Wire Line
 	5450 3200 5350 3200
-Text Label 5700 4000 0    60   ~ 0
+Text Label 6150 4000 0    60   ~ 0
 SERVO1
-Text Label 5700 4100 0    60   ~ 0
+Text Label 6150 4100 0    60   ~ 0
 SERVO2
 Text Label 5450 3800 0    60   ~ 0
 PUMP2
 Text Label 5450 3200 0    60   ~ 0
 ANALOG2
-Text Label 5450 3100 0    60   ~ 0
-ANALOG1
 Wire Wire Line
 	8100 5550 8100 5650
 Connection ~ 8100 5650
 Wire Wire Line
 	8000 5650 8100 5650
-Text Notes 2350 6300 0    60   ~ 0
-2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor I2C\n1-2 Servo PWM\n1-2 analog input\n1-2 digital input
+Text Notes 1150 7400 0    60   ~ 0
+Features:\n2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor SPI\n2 Servo PWM\n2 analog input\n1 digital input
 Wire Wire Line
 	3400 3100 3550 3100
 Wire Wire Line
@@ -558,8 +552,6 @@ F 3 "" H 8850 1450 50  0000 C CNN
 	1    8850 1450
 	1    0    0    -1  
 $EndComp
-Text Label 7100 1000 0    60   ~ 0
-5V_CAN
 $Comp
 L Device:C C10
 U 1 1 56D60C4F
@@ -618,7 +610,7 @@ Wire Wire Line
 Connection ~ 8250 1000
 Connection ~ 9450 1000
 Wire Wire Line
-	7100 1000 7700 1000
+	7250 1000 7700 1000
 $Comp
 L Device:D_Schottky_Small D2
 U 1 1 5BD6F803
@@ -719,7 +711,7 @@ Wire Wire Line
 	5350 3900 5450 3900
 Text Label 5450 3500 0    60   ~ 0
 VACUUM_SENS_RESET
-Text Label 8100 3000 2    50   ~ 0
+Text Label 8100 3000 2    60   ~ 0
 DIGITAL_INPUT1
 Wire Wire Line
 	2150 1500 2150 1450
@@ -737,7 +729,7 @@ $EndComp
 Wire Wire Line
 	1750 1500 2150 1500
 $Sheet
-S 8250 1850 1450 1350
+S 8250 1850 1450 1250
 U 5E1FAFCF
 F0 "Sensors" 50
 F1 "Sensors.sch" 50
@@ -745,13 +737,12 @@ F2 "VACUUM_SENS1_RESET" I L 8250 1950 50
 F3 "ANALOG_SENS_IN1" I L 8250 2750 50 
 F4 "ANALOG_SENS_IN2" I L 8250 2850 50 
 F5 "DIGITAL_IN1" I L 8250 3000 50 
-F6 "DIGITAL_IN2" I L 8250 3100 50 
-F7 "VACUUM_SENS2_RESET" I L 8250 2050 50 
-F8 "SPI_SCK" I L 8250 2200 50 
-F9 "SPI_MOSI" I L 8250 2300 50 
-F10 "SPI_MISO" I L 8250 2400 50 
-F11 "VACUUM_SENS1_CS" I L 8250 2500 50 
-F12 "VACUUM_SENS2_CS" I L 8250 2600 50 
+F6 "VACUUM_SENS2_RESET" I L 8250 2050 50 
+F7 "SPI_SCK" I L 8250 2200 50 
+F8 "SPI_MOSI" I L 8250 2300 50 
+F9 "SPI_MISO" I L 8250 2400 50 
+F10 "VACUUM_SENS1_CS" I L 8250 2500 50 
+F11 "VACUUM_SENS2_CS" I L 8250 2600 50 
 $EndSheet
 $Sheet
 S 8250 3600 1450 850 
@@ -796,8 +787,6 @@ Wire Wire Line
 	5450 3500 5350 3500
 Wire Wire Line
 	5350 3600 5450 3600
-Text Label 8100 3100 2    50   ~ 0
-DIGITAL_INPUT2
 Wire Wire Line
 	5350 5100 5450 5100
 Wire Wire Line
@@ -849,29 +838,29 @@ $EndComp
 $Comp
 L Device:R_Small R4
 U 1 1 5E2FD4D2
-P 5550 4000
-F 0 "R4" V 5525 3850 39  0000 C CNN
-F 1 "330" V 5550 4000 39  0000 C CNN
-F 2 "" H 5550 4000 50  0001 C CNN
-F 3 "~" H 5550 4000 50  0001 C CNN
-	1    5550 4000
+P 5900 4000
+F 0 "R4" V 5875 3850 39  0000 C CNN
+F 1 "330" V 5900 4000 39  0000 C CNN
+F 2 "" H 5900 4000 50  0001 C CNN
+F 3 "~" H 5900 4000 50  0001 C CNN
+	1    5900 4000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5650 4000 5700 4000
+	6000 4000 6150 4000
 $Comp
 L Device:R_Small R5
 U 1 1 5E300459
-P 5550 4100
-F 0 "R5" V 5525 3950 39  0000 C CNN
-F 1 "330" V 5550 4100 39  0000 C CNN
-F 2 "" H 5550 4100 50  0001 C CNN
-F 3 "~" H 5550 4100 50  0001 C CNN
-	1    5550 4100
+P 5900 4100
+F 0 "R5" V 5875 3950 39  0000 C CNN
+F 1 "330" V 5900 4100 39  0000 C CNN
+F 2 "" H 5900 4100 50  0001 C CNN
+F 3 "~" H 5900 4100 50  0001 C CNN
+	1    5900 4100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5650 4100 5700 4100
+	6000 4100 6150 4100
 Wire Wire Line
 	8100 3700 8250 3700
 Wire Wire Line
@@ -892,8 +881,6 @@ Wire Wire Line
 	8100 2850 8250 2850
 Wire Wire Line
 	8250 3000 8100 3000
-Wire Wire Line
-	8100 3100 8250 3100
 Text Label 6350 5400 0    60   ~ 0
 DIGITAL_INPUT1
 Text Label 5450 5200 0    60   ~ 0
@@ -1035,6 +1022,41 @@ Wire Wire Line
 	5050 1700 5500 1700
 Wire Wire Line
 	5500 1800 5050 1800
-Text Label 6200 2650 0    60   ~ 0
-DIGITAL_INPUT2
+Text Notes 6450 5200 0    60   ~ 0
+Note:\nDIGITAL_INPUT1\nshared with\nUART1RX
+$Comp
+L power:+5V #PWR0106
+U 1 1 5E44C5DA
+P 9950 4800
+F 0 "#PWR0106" H 9950 4650 50  0001 C CNN
+F 1 "+5V" H 9965 4973 50  0000 C CNN
+F 2 "" H 9950 4800 50  0001 C CNN
+F 3 "" H 9950 4800 50  0001 C CNN
+	1    9950 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5E4595E8
+P 9950 5750
+F 0 "#PWR0107" H 9950 5600 50  0001 C CNN
+F 1 "+5V" H 9965 5923 50  0000 C CNN
+F 2 "" H 9950 5750 50  0001 C CNN
+F 3 "" H 9950 5750 50  0001 C CNN
+	1    9950 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 5E459C00
+P 7250 1000
+F 0 "#PWR0108" H 7250 850 50  0001 C CNN
+F 1 "+5V" H 7265 1173 50  0000 C CNN
+F 2 "" H 7250 1000 50  0001 C CNN
+F 3 "" H 7250 1000 50  0001 C CNN
+	1    7250 1000
+	1    0    0    -1  
+$EndComp
+Text Label 5450 3100 0    60   ~ 0
+ANALOG1
 $EndSCHEMATC
