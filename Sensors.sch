@@ -20,23 +20,10 @@ Text HLabel 3350 4350 0    50   Input ~ 0
 ANALOG_SENS_IN1
 Text HLabel 3350 5150 0    50   Input ~ 0
 ANALOG_SENS_IN2
-Text HLabel 7300 4550 0    50   Input ~ 0
+Text HLabel 4050 6050 0    50   Input ~ 0
 DIGITAL_IN1
 Text HLabel 6950 3200 0    50   Input ~ 0
 VACUUM_SENS2_RESET
-$Comp
-L actuator-board-rescue:CONN_2PIN-_connectors CONN?
-U 1 1 5E2B60FB
-P 7650 4950
-AR Path="/5E2B60FB" Ref="CONN?"  Part="1" 
-AR Path="/5E1FAFCF/5E2B60FB" Ref="CONN7"  Part="1" 
-F 0 "CONN7" H 7868 5353 59  0000 L CNN
-F 1 "Digital input 1" H 7868 5248 59  0000 L CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 7650 4950 59  0001 C CNN
-F 3 "" H 7650 4950 59  0000 C CNN
-	1    7650 4950
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C11
 U 1 1 5E30FCAA
@@ -93,19 +80,8 @@ F 3 "~" H 3675 5300 50  0001 C CNN
 	1    3675 5300
 	1    0    0    -1  
 $EndComp
-$Comp
-L _connectors:ADC_2PIN CONN6
-U 1 1 5E255B96
-P 4400 4950
-F 0 "CONN6" H 4578 5353 59  0000 L CNN
-F 1 "ANALOG1" H 4578 5248 59  0000 L CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4400 4950 59  0001 C CNN
-F 3 "" H 4400 4950 59  0000 C CNN
-	1    4400 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3900 4550 4050 4550
+	3900 4550 4350 4550
 Wire Wire Line
 	3675 4900 3900 4900
 Wire Wire Line
@@ -166,12 +142,12 @@ $EndComp
 $Comp
 L power:GND #PWR029
 U 1 1 5E4F62EA
-P 7300 4650
-F 0 "#PWR029" H 7300 4400 50  0001 C CNN
-F 1 "GND" H 7305 4477 50  0000 C CNN
-F 2 "" H 7300 4650 50  0001 C CNN
-F 3 "" H 7300 4650 50  0001 C CNN
-	1    7300 4650
+P 4350 5050
+F 0 "#PWR029" H 4350 4800 50  0001 C CNN
+F 1 "GND" H 4355 4877 50  0000 C CNN
+F 2 "" H 4350 5050 50  0001 C CNN
+F 3 "" H 4350 5050 50  0001 C CNN
+	1    4350 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -187,9 +163,7 @@ F 3 "" H 3650 4650 50  0001 C CNN
 $EndComp
 Connection ~ 3650 4650
 Wire Wire Line
-	3650 4650 4050 4650
-Wire Wire Line
-	4050 5450 3675 5450
+	3650 4650 4350 4650
 Connection ~ 3675 5450
 $Comp
 L power:GND #PWR024
@@ -387,29 +361,45 @@ F 3 "" H 9000 2300 50  0001 C CNN
 	1    9000 2300
 	1    0    0    -1  
 $EndComp
-$Comp
-L _connectors:ADC_2PIN CONN5
-U 1 1 5E2563B4
-P 4400 5750
-F 0 "CONN5" H 4578 6153 59  0000 L CNN
-F 1 "ANALOG2" H 4578 6048 59  0000 L CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4400 5750 59  0001 C CNN
-F 3 "" H 4400 5750 59  0000 C CNN
-	1    4400 5750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3900 5350 4050 5350
 Text Notes 2400 2150 0    60   ~ 0
 Notes:\n- Absolute pressure\n- 0-1 atm\n- SPI mode\n- output range: 24bits 10%-90%
-Text Notes 5250 5100 0    60   ~ 0
+Text Notes 1000 5000 0    60   ~ 0
 Input range = 0-6.6V\nFc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
 Wire Notes Line
-	5050 5600 5150 5600
+	2250 5600 2350 5600
 Wire Notes Line
-	5150 5600 5150 4400
+	2350 5600 2350 4400
 Wire Notes Line
-	5150 4400 5050 4400
-Text Notes 7850 4850 0    60   ~ 0
+	2350 4400 2250 4400
+Text Notes 1450 6250 0    60   ~ 0
 Input range = 0-3.3V
+$Comp
+L Connector_Generic:Conn_01x06 J2
+U 1 1 5E47357A
+P 4550 4750
+F 0 "J2" H 4630 4742 50  0000 L CNN
+F 1 "Conn_01x06" H 4630 4651 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0671_1x06-1MP_P1.25mm_Horizontal" H 4550 4750 50  0001 C CNN
+F 3 "~" H 4550 4750 50  0001 C CNN
+	1    4550 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5350 4050 4750
+Wire Wire Line
+	4050 4750 4350 4750
+Wire Wire Line
+	4150 5450 4150 4850
+Wire Wire Line
+	4150 4850 4350 4850
+Wire Wire Line
+	3675 5450 4150 5450
+Wire Wire Line
+	4350 4950 4250 4950
+Wire Wire Line
+	4250 4950 4250 6050
+Wire Wire Line
+	4250 6050 4050 6050
 $EndSCHEMATC

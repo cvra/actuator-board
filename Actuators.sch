@@ -58,28 +58,6 @@ Wire Wire Line
 	5325 3450 5325 3500
 Text HLabel 3850 2950 0    50   Input ~ 0
 SOLENOID_IN2
-$Comp
-L Motor:Motor_Servo M1
-U 1 1 5E37BD0B
-P 5000 5350
-F 0 "M1" H 5332 5415 50  0000 L CNN
-F 1 "Motor_Servo" H 5332 5324 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5000 5160 50  0001 C CNN
-F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5160 50  0001 C CNN
-	1    5000 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor:Motor_Servo M2
-U 1 1 5E38464C
-P 5000 5900
-F 0 "M2" H 5332 5965 50  0000 L CNN
-F 1 "Motor_Servo" H 5332 5874 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5000 5710 50  0001 C CNN
-F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5710 50  0001 C CNN
-	1    5000 5900
-	1    0    0    -1  
-$EndComp
 Text HLabel 3850 2750 0    50   Input ~ 0
 SOLENOID_IN1
 $Comp
@@ -109,20 +87,20 @@ F 3 "" H 3350 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J1
+L Connector_Generic:Conn_01x03 J1
 U 1 1 5E3C2833
-P 2600 5350
-F 0 "J1" H 2518 5567 50  0000 C CNN
-F 1 "SERVO PWR" H 2518 5476 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2600 5350 50  0001 C CNN
-F 3 "~" H 2600 5350 50  0001 C CNN
-	1    2600 5350
+P 2600 5250
+F 0 "J1" H 2600 5450 50  0000 C CNN
+F 1 "SERVO DCDC 5V" H 2600 5000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2600 5250 50  0001 C CNN
+F 3 "~" H 2600 5250 50  0001 C CNN
+	1    2600 5250
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 5450 3050 5450
+	2800 5250 3050 5250
 Wire Wire Line
-	3050 5450 3050 5650
+	3050 5250 3050 5650
 Wire Wire Line
 	3050 5650 3350 5650
 Wire Wire Line
@@ -179,28 +157,6 @@ F 3 "" H 4550 2350 50  0001 C CNN
 	1    4550 2350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Motor:Motor_DC M3
-U 1 1 5E248EAA
-P 7450 2150
-F 0 "M3" V 7250 2100 50  0000 C CNN
-F 1 "Pump 1" V 7650 2100 39  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7450 2060 50  0001 C CNN
-F 3 "~" H 7450 2060 50  0001 C CNN
-	1    7450 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor:Motor_DC M4
-U 1 1 5E2BC872
-P 7450 3900
-F 0 "M4" V 7250 3850 50  0000 C CNN
-F 1 "Pump 2" V 7650 3850 39  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7450 3810 50  0001 C CNN
-F 3 "~" H 7450 3810 50  0001 C CNN
-	1    7450 3900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5250 2650 6600 2650
 Wire Wire Line
@@ -223,8 +179,6 @@ Wire Wire Line
 	7000 2050 7000 1950
 Connection ~ 7000 1950
 Wire Wire Line
-	7000 1950 7450 1950
-Wire Wire Line
 	7000 2350 7000 2450
 Wire Wire Line
 	7000 2450 7250 2450
@@ -232,16 +186,12 @@ Wire Wire Line
 	7000 3800 7000 3700
 Connection ~ 7000 3700
 Wire Wire Line
-	7000 3700 7450 3700
-Wire Wire Line
 	7000 4100 7000 4200
 Wire Wire Line
 	7000 4200 7250 4200
 Wire Wire Line
 	7000 4600 7000 4500
 Connection ~ 7000 4500
-Wire Wire Line
-	7000 4500 7450 4500
 Wire Wire Line
 	7000 4900 7000 5000
 Wire Wire Line
@@ -297,43 +247,11 @@ $EndComp
 Wire Wire Line
 	7000 3150 7000 3250
 Wire Wire Line
-	7000 2750 7450 2750
-Wire Wire Line
 	5250 2750 7000 2750
 Connection ~ 7000 2750
 Wire Wire Line
 	7000 2850 7000 2750
-$Comp
-L Device:Electromagnetic_Actor L1
-U 1 1 5E5DF558
-P 7450 3050
-F 0 "L1" H 7580 3146 50  0000 L CNN
-F 1 "Solenoid 1" H 7580 3055 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 7425 3150 50  0001 C CNN
-F 3 "~" V 7425 3150 50  0001 C CNN
-	1    7450 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 2750 7450 2850
-Wire Wire Line
-	7450 3150 7450 3250
-$Comp
-L Device:Electromagnetic_Actor L2
-U 1 1 5E5E309E
-P 7450 4800
-F 0 "L2" H 7580 4896 50  0000 L CNN
-F 1 "Solenoid 2" H 7580 4805 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 7425 4900 50  0001 C CNN
-F 3 "~" V 7425 4900 50  0001 C CNN
-	1    7450 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 4500 7450 4600
-Wire Wire Line
-	7450 4900 7450 5000
-Text Notes 7600 2650 0    50   ~ 0
+Text Notes 7650 2050 0    50   ~ 0
 Actuator 1\n(1A max)
 Wire Notes Line
 	8050 1850 8050 3500
@@ -351,7 +269,7 @@ Wire Notes Line
 	6800 5250 6800 3600
 Wire Notes Line
 	6800 3600 8050 3600
-Text Notes 7600 4400 0    50   ~ 0
+Text Notes 7600 3800 0    50   ~ 0
 Actuator 2\n(1A max)
 $Comp
 L _power:DRV8847_TSSOP U6
@@ -479,7 +397,7 @@ AR Path="/5E4761AC" Ref="C?"  Part="1"
 AR Path="/5E1FB153/5E4761AC" Ref="C19"  Part="1" 
 F 0 "C19" H 5200 2250 50  0000 L CNN
 F 1 "22uF" H 5200 2150 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 5538 2050 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.8" H 5538 2050 50  0001 C CNN
 F 3 "~" H 5500 2200 50  0001 C CNN
 	1    5500 2200
 	1    0    0    -1  
@@ -527,4 +445,95 @@ Wire Wire Line
 	3400 3200 3850 3200
 Text Notes 5200 2400 0    50   ~ 0
 ≥16V
+$Comp
+L Motor:Motor_Servo M2
+U 1 1 5E38464C
+P 5000 5900
+F 0 "M2" H 5332 5965 50  0000 L CNN
+F 1 "Motor_Servo" H 5332 5874 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 5000 5710 50  0001 C CNN
+F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5710 50  0001 C CNN
+	1    5000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_Servo M1
+U 1 1 5E37BD0B
+P 5000 5350
+F 0 "M1" H 5332 5415 50  0000 L CNN
+F 1 "Motor_Servo" H 5332 5324 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 5000 5160 50  0001 C CNN
+F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5160 50  0001 C CNN
+	1    5000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 5E485C32
+P 7750 2650
+F 0 "J3" H 7830 2642 50  0000 L CNN
+F 1 "Actuator1" H 7830 2551 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal" H 7750 2650 50  0001 C CNN
+F 3 "~" H 7750 2650 50  0001 C CNN
+	1    7750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 5E486381
+P 7750 4400
+F 0 "J4" H 7830 4392 50  0000 L CNN
+F 1 "Actuator2" H 7830 4301 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal" H 7750 4400 50  0001 C CNN
+F 3 "~" H 7750 4400 50  0001 C CNN
+	1    7750 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1950 7550 2550
+Wire Wire Line
+	7000 1950 7550 1950
+Wire Wire Line
+	7450 2450 7450 2650
+Wire Wire Line
+	7450 2650 7550 2650
+Wire Wire Line
+	7000 2750 7550 2750
+Wire Wire Line
+	7550 2850 7450 2850
+Wire Wire Line
+	7450 2850 7450 3250
+Wire Wire Line
+	7000 4500 7550 4500
+Wire Wire Line
+	7550 4400 7450 4400
+Wire Wire Line
+	7450 4400 7450 4200
+Wire Wire Line
+	7550 4300 7550 3700
+Wire Wire Line
+	7000 3700 7550 3700
+Wire Wire Line
+	7550 4600 7450 4600
+Wire Wire Line
+	7450 4600 7450 5000
+Text Notes 7600 4050 0    50   ~ 0
+Pump 2
+Text Notes 7550 4850 0    50   ~ 0
+Solenoid 2
+Text Notes 7500 3100 0    50   ~ 0
+Solenoid 1
+Text Notes 7600 2350 0    50   ~ 0
+Pump 1
+$Comp
+L power:+BATT #PWR0111
+U 1 1 5E4B1181
+P 2800 5150
+F 0 "#PWR0111" H 2800 5000 50  0001 C CNN
+F 1 "+BATT" H 2815 5323 50  0000 C CNN
+F 2 "" H 2800 5150 50  0001 C CNN
+F 3 "" H 2800 5150 50  0001 C CNN
+	1    2800 5150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
