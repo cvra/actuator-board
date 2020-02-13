@@ -19,3 +19,11 @@ __RevB change log:__
 
 ![Board Rendering](https://raw.githubusercontent.com/cvra/can-io-board/master/can-io-RevB.png)
 ![Board dimensions](https://raw.githubusercontent.com/cvra/can-io-board/master/can-io-RevB-dimensions.png)
+
+## Generating Digikey BOM using Kicost
+
+Generate the Bom in XML format from KiCAD, then:
+
+```
+kicost -i actuator-board.xml --include digikey
+```

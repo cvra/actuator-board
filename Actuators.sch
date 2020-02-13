@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:actuator-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -70,6 +69,7 @@ F 0 "C17" H 3468 5546 50  0000 L CNN
 F 1 "10uF" H 3468 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 3388 5350 50  0001 C CNN
 F 3 "~" H 3350 5500 50  0001 C CNN
+F 4 "399-7442-1-ND" H 3350 5500 50  0001 C CNN "digikey#"
 	1    3350 5500
 	1    0    0    -1  
 $EndComp
@@ -94,6 +94,7 @@ F 0 "J1" H 2600 5450 50  0000 C CNN
 F 1 "SERVO DCDC 5V" H 2600 5000 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2600 5250 50  0001 C CNN
 F 3 "~" H 2600 5250 50  0001 C CNN
+F 4 "1" H 2600 5250 50  0001 C CNN "DNP"
 	1    2600 5250
 	-1   0    0    -1  
 $EndComp
@@ -204,7 +205,7 @@ F 0 "D3" H 6950 2100 50  0000 L CNN
 F 1 "STPS1L40ZFY" H 6800 2300 39  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123F" H 7000 2200 50  0001 C CNN
 F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 2200 50  0001 C CNN
-F 4 "497-17153-1-ND" V 7000 2200 50  0001 C CNN "Digikey"
+F 4 "497-17153-1-ND" V 7000 2200 50  0001 C CNN "digikey#"
 	1    7000 2200
 	0    1    1    0   
 $EndComp
@@ -216,7 +217,7 @@ F 0 "D5" H 6950 3850 50  0000 L CNN
 F 1 "STPS1L40ZFY" H 6800 4050 39  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123F" H 7000 3950 50  0001 C CNN
 F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 3950 50  0001 C CNN
-F 4 "497-17153-1-ND" V 7000 3950 50  0001 C CNN "Digikey"
+F 4 "497-17153-1-ND" V 7000 3950 50  0001 C CNN "digikey#"
 	1    7000 3950
 	0    1    1    0   
 $EndComp
@@ -228,7 +229,7 @@ F 0 "D6" H 6950 4650 50  0000 L CNN
 F 1 "STPS1L40ZFY" H 6800 4850 39  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123F" H 7000 4750 50  0001 C CNN
 F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 4750 50  0001 C CNN
-F 4 "497-17153-1-ND" V 7000 4750 50  0001 C CNN "Digikey"
+F 4 "497-17153-1-ND" V 7000 4750 50  0001 C CNN "digikey#"
 	1    7000 4750
 	0    1    1    0   
 $EndComp
@@ -240,7 +241,7 @@ F 0 "D4" H 6950 2900 50  0000 L CNN
 F 1 "STPS1L40ZFY" H 6800 3100 39  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123F" H 7000 3000 50  0001 C CNN
 F 3 "https://www.st.com/resource/en/datasheet/stps1l40-y.pdf" H 7000 3000 50  0001 C CNN
-F 4 "497-17153-1-ND" V 7000 3000 50  0001 C CNN "Digikey"
+F 4 "497-17153-1-ND" V 7000 3000 50  0001 C CNN "digikey#"
 	1    7000 3000
 	0    1    1    0   
 $EndComp
@@ -279,6 +280,7 @@ F 0 "U6" H 4100 3600 50  0000 C CNN
 F 1 "DRV8847_TSSOP" H 4900 3600 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4550 3000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/drv8847.pdf" H 4550 3000 50  0001 C CNN
+F 4 "296-53425-1-ND" H 4550 3050 50  0001 C CNN "digikey#"
 	1    4550 3050
 	1    0    0    -1  
 $EndComp
@@ -298,9 +300,10 @@ L Device:C_Small C18
 U 1 1 5E2FBBF2
 P 5700 2200
 F 0 "C18" H 5792 2246 50  0000 L CNN
-F 1 "0.1 uF" H 5792 2155 50  0000 L CNN
+F 1 "0.1uF" H 5792 2155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5700 2200 50  0001 C CNN
 F 3 "~" H 5700 2200 50  0001 C CNN
+F 4 "399-1283-1-ND" H 5700 2200 50  0001 C CNN "digikey#"
 	1    5700 2200
 	1    0    0    -1  
 $EndComp
@@ -399,6 +402,7 @@ F 0 "C19" H 5200 2250 50  0000 L CNN
 F 1 "22uF" H 5200 2150 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_5x5.8" H 5538 2050 50  0001 C CNN
 F 3 "~" H 5500 2200 50  0001 C CNN
+F 4 "PCE4240CT-ND" H 5500 2200 50  0001 C CNN "digikey#"
 	1    5500 2200
 	1    0    0    -1  
 $EndComp
@@ -435,6 +439,7 @@ F 0 "R2" H 3459 3346 50  0000 L CNN
 F 1 "10k" H 3459 3255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 3300 50  0001 C CNN
 F 3 "~" H 3400 3300 50  0001 C CNN
+F 4 "311-10KGRCT-ND" H 3400 3300 50  0001 C CNN "digikey#"
 	1    3400 3300
 	1    0    0    -1  
 $EndComp
@@ -464,6 +469,7 @@ F 0 "M1" H 5332 5415 50  0000 L CNN
 F 1 "Motor_Servo" H 5332 5324 50  0000 L CNN
 F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 5000 5160 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5160 50  0001 C CNN
+F 4 "WM7621CT-ND" H 5000 5350 50  0001 C CNN "digikey#"
 	1    5000 5350
 	1    0    0    -1  
 $EndComp
@@ -475,6 +481,7 @@ F 0 "J3" H 7830 2642 50  0000 L CNN
 F 1 "Actuator1" H 7830 2551 50  0000 L CNN
 F 2 "Connector_Molex:Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal" H 7750 2650 50  0001 C CNN
 F 3 "~" H 7750 2650 50  0001 C CNN
+F 4 "WM7622CT-ND" H 7750 2650 50  0001 C CNN "digikey#"
 	1    7750 2650
 	1    0    0    -1  
 $EndComp
@@ -486,6 +493,7 @@ F 0 "J4" H 7830 4392 50  0000 L CNN
 F 1 "Actuator2" H 7830 4301 50  0000 L CNN
 F 2 "Connector_Molex:Molex_PicoBlade_53261-0471_1x04-1MP_P1.25mm_Horizontal" H 7750 4400 50  0001 C CNN
 F 3 "~" H 7750 4400 50  0001 C CNN
+F 4 "WM7622CT-ND" H 7750 4400 50  0001 C CNN "digikey#"
 	1    7750 4400
 	1    0    0    -1  
 $EndComp

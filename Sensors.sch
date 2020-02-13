@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:actuator-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -231,6 +230,7 @@ F 0 "U4" H 3750 3350 50  0000 C CNN
 F 1 "MPRLS0015PA0000SA" H 4650 3350 50  0000 C CNN
 F 2 "_sensors:MPR" H 4200 2900 50  0001 L CNN
 F 3 "https://sensing.honeywell.com/honeywell-sensing-micropressure-board-mount-pressure-mpr-series-datasheet-32332628.pdf" H 4300 2275 50  0001 L CNN
+F 4 "480-7099-1-ND" H 4200 2900 50  0001 C CNN "digikey#"
 	1    4200 2900
 	1    0    0    -1  
 $EndComp
@@ -251,6 +251,7 @@ F 0 "C13" H 4950 2650 50  0000 C CNN
 F 1 "1nF" H 5250 2650 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5100 2650 50  0001 C CNN
 F 3 "~" H 5100 2650 50  0001 C CNN
+F 4 "399-8984-1-ND" H 5100 2650 50  0001 C CNN "digikey#"
 	1    5100 2650
 	1    0    0    -1  
 $EndComp
@@ -383,6 +384,7 @@ F 0 "J2" H 4630 4742 50  0000 L CNN
 F 1 "Conn_01x06" H 4630 4651 50  0000 L CNN
 F 2 "Connector_Molex:Molex_PicoBlade_53261-0671_1x06-1MP_P1.25mm_Horizontal" H 4550 4750 50  0001 C CNN
 F 3 "~" H 4550 4750 50  0001 C CNN
+F 4 "WM7612CT-ND" H 4550 4750 50  0001 C CNN "digikey#"
 	1    4550 4750
 	1    0    0    -1  
 $EndComp
