@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:actuator-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -228,7 +229,7 @@ U 1 1 5E41ADA3
 P 4200 2900
 F 0 "U4" H 3750 3350 50  0000 C CNN
 F 1 "MPRLS0015PA0000SA" H 4650 3350 50  0000 C CNN
-F 2 "_sensors:MPR" H 4200 2900 50  0001 L CNN
+F 2 "_sensors:MPR-AbsoluteRef" H 4200 2900 50  0001 L CNN
 F 3 "https://sensing.honeywell.com/honeywell-sensing-micropressure-board-mount-pressure-mpr-series-datasheet-32332628.pdf" H 4300 2275 50  0001 L CNN
 F 4 "480-7099-1-ND" H 4200 2900 50  0001 C CNN "digikey#"
 	1    4200 2900
@@ -324,8 +325,9 @@ U 1 1 5E43EDD3
 P 7650 2900
 F 0 "U5" H 7200 3350 50  0000 C CNN
 F 1 "MPRLS0015PA0000SA" H 8100 3350 50  0000 C CNN
-F 2 "_sensors:MPR" H 7650 2900 50  0001 L CNN
+F 2 "_sensors:MPR-AbsoluteRef" H 7650 2900 50  0001 L CNN
 F 3 "https://sensing.honeywell.com/honeywell-sensing-micropressure-board-mount-pressure-mpr-series-datasheet-32332628.pdf" H 7750 2275 50  0001 L CNN
+F 4 "480-7099-1-ND" H 7650 2900 50  0001 C CNN "digikey#"
 	1    7650 2900
 	1    0    0    -1  
 $EndComp
@@ -366,15 +368,15 @@ Wire Wire Line
 	3900 5350 4050 5350
 Text Notes 2400 2150 0    60   ~ 0
 Notes:\n- Absolute pressure\n- 0-1 atm\n- SPI mode\n- output range: 24bits 10%-90%
-Text Notes 1000 5000 0    60   ~ 0
+Text Notes 800  4900 0    60   ~ 0
 Input range = 0-6.6V\nFc = 318 Hz\n(10k+10k)/(10k*10k*100nF*2*pi)
 Wire Notes Line
-	2250 5600 2350 5600
+	2500 5350 2600 5350
 Wire Notes Line
-	2350 5600 2350 4400
+	2500 5350 2500 4150
 Wire Notes Line
-	2350 4400 2250 4400
-Text Notes 1450 6250 0    60   ~ 0
+	2600 4150 2500 4150
+Text Notes 3550 6200 0    60   ~ 0
 Input range = 0-3.3V
 $Comp
 L Connector_Generic:Conn_01x06 J2

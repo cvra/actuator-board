@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:actuator-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -89,27 +90,17 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x03 J1
 U 1 1 5E3C2833
-P 2600 5250
-F 0 "J1" H 2600 5450 50  0000 C CNN
-F 1 "SERVO DCDC 5V" H 2600 5000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2600 5250 50  0001 C CNN
-F 3 "~" H 2600 5250 50  0001 C CNN
-F 4 "1" H 2600 5250 50  0001 C CNN "DNP"
-	1    2600 5250
+P 2600 5100
+F 0 "J1" H 2600 5300 50  0000 C CNN
+F 1 "SERVO DCDC 5V" H 2650 4850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2600 5100 50  0001 C CNN
+F 3 "~" H 2600 5100 50  0001 C CNN
+F 4 "1" H 2600 5100 50  0001 C CNN "DNP"
+	1    2600 5100
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 5250 3050 5250
-Wire Wire Line
-	3050 5250 3050 5650
-Wire Wire Line
-	3050 5650 3350 5650
-Wire Wire Line
-	2800 5350 3350 5350
-Connection ~ 3350 5350
-Wire Wire Line
 	3350 5350 3850 5350
-Connection ~ 3350 5650
 Wire Wire Line
 	3850 5350 3850 5900
 Wire Wire Line
@@ -246,8 +237,6 @@ F 4 "497-17153-1-ND" V 7000 3000 50  0001 C CNN "digikey#"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7000 3150 7000 3250
-Wire Wire Line
 	5250 2750 7000 2750
 Connection ~ 7000 2750
 Wire Wire Line
@@ -335,8 +324,6 @@ $EndComp
 Connection ~ 7250 2450
 Wire Wire Line
 	7250 2450 7450 2450
-Wire Wire Line
-	7000 3250 7250 3250
 $Comp
 L power:GND #PWR0103
 U 1 1 5E3F96C2
@@ -348,9 +335,8 @@ F 3 "" H 7250 3250 50  0001 C CNN
 	1    7250 3250
 	1    0    0    -1  
 $EndComp
-Connection ~ 7250 3250
 Wire Wire Line
-	7250 3250 7450 3250
+	7250 3200 7450 3200
 $Comp
 L power:GND #PWR0104
 U 1 1 5E3F9BB4
@@ -400,7 +386,7 @@ AR Path="/5E4761AC" Ref="C?"  Part="1"
 AR Path="/5E1FB153/5E4761AC" Ref="C19"  Part="1" 
 F 0 "C19" H 5200 2250 50  0000 L CNN
 F 1 "22uF" H 5200 2150 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_5x5.8" H 5538 2050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5538 2050 50  0001 C CNN
 F 3 "~" H 5500 2200 50  0001 C CNN
 F 4 "PCE4240CT-ND" H 5500 2200 50  0001 C CNN "digikey#"
 	1    5500 2200
@@ -451,29 +437,6 @@ Wire Wire Line
 Text Notes 5200 2400 0    50   ~ 0
 ≥16V
 $Comp
-L Motor:Motor_Servo M2
-U 1 1 5E38464C
-P 5000 5900
-F 0 "M2" H 5332 5965 50  0000 L CNN
-F 1 "Motor_Servo" H 5332 5874 50  0000 L CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 5000 5710 50  0001 C CNN
-F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5710 50  0001 C CNN
-	1    5000 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor:Motor_Servo M1
-U 1 1 5E37BD0B
-P 5000 5350
-F 0 "M1" H 5332 5415 50  0000 L CNN
-F 1 "Motor_Servo" H 5332 5324 50  0000 L CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 5000 5160 50  0001 C CNN
-F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5000 5160 50  0001 C CNN
-F 4 "WM7621CT-ND" H 5000 5350 50  0001 C CNN "digikey#"
-	1    5000 5350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5E485C32
 P 7750 2650
@@ -510,7 +473,7 @@ Wire Wire Line
 Wire Wire Line
 	7550 2850 7450 2850
 Wire Wire Line
-	7450 2850 7450 3250
+	7450 2850 7450 3200
 Wire Wire Line
 	7000 4500 7550 4500
 Wire Wire Line
@@ -536,12 +499,67 @@ Pump 1
 $Comp
 L power:+BATT #PWR0111
 U 1 1 5E4B1181
-P 2800 5150
-F 0 "#PWR0111" H 2800 5000 50  0001 C CNN
-F 1 "+BATT" H 2815 5323 50  0000 C CNN
-F 2 "" H 2800 5150 50  0001 C CNN
-F 3 "" H 2800 5150 50  0001 C CNN
-	1    2800 5150
+P 3000 5000
+F 0 "#PWR0111" H 3000 4850 50  0001 C CNN
+F 1 "+BATT" H 3015 5173 50  0000 C CNN
+F 2 "" H 3000 5000 50  0001 C CNN
+F 3 "" H 3000 5000 50  0001 C CNN
+	1    3000 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3250 7250 3200
+$Comp
+L power:GND #PWR?
+U 1 1 5E4BE752
+P 3000 5100
+AR Path="/5E4BE752" Ref="#PWR?"  Part="1" 
+AR Path="/5E1FB153/5E4BE752" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 3000 4850 50  0001 C CNN
+F 1 "GND" H 3005 4927 50  0000 C CNN
+F 2 "" H 3000 5100 50  0001 C CNN
+F 3 "" H 3000 5100 50  0001 C CNN
+	1    3000 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5100 3000 5100
+Wire Wire Line
+	3000 5000 2800 5000
+Connection ~ 3350 5350
+Wire Wire Line
+	2900 5200 2900 5350
+Wire Wire Line
+	2800 5200 2900 5200
+Wire Wire Line
+	2900 5350 3350 5350
+Wire Wire Line
+	7000 3150 7000 3200
+Wire Wire Line
+	7000 3200 7250 3200
+Connection ~ 7250 3200
+$Comp
+L Connector_Generic:Conn_01x03 J9
+U 1 1 5E4FD67B
+P 4900 5350
+F 0 "J9" H 4980 5392 50  0000 L CNN
+F 1 "Servo" H 4980 5301 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 4900 5350 50  0001 C CNN
+F 3 "~" H 4900 5350 50  0001 C CNN
+F 4 "WM7621CT-ND" H 4900 5350 50  0001 C CNN "digikey#"
+	1    4900 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J10
+U 1 1 5E50039E
+P 4900 5900
+F 0 "J10" H 4980 5942 50  0000 L CNN
+F 1 "Servo" H 4980 5851 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 4900 5900 50  0001 C CNN
+F 3 "~" H 4900 5900 50  0001 C CNN
+F 4 "WM7621CT-ND" H 4900 5900 50  0001 C CNN "digikey#"
+	1    4900 5900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
