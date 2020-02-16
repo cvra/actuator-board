@@ -9,8 +9,8 @@ Title "Actuator board"
 Date "2020-02-12"
 Rev "A.4"
 Comp "Club Vaudois de Robotique Autonome"
-Comment1 "Salah Missri"
-Comment2 "Authors: Patrick Spieler, Michael Spieler, "
+Comment1 "Michael Spieler, Salah Missri, Antoine Albertelli"
+Comment2 "Authors: "
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -22,7 +22,7 @@ F 0 "X1" H 5950 5950 60  0000 C CNN
 F 1 "16MHz 10ppm" H 5950 6050 60  0000 C CNN
 F 2 "Crystal:Crystal_SMD_SeikoEpson_TSX3225-4Pin_3.2x2.5mm" H 5950 5850 60  0001 C CNN
 F 3 "" H 5950 5850 60  0000 C CNN
-F 4 "SER4069CT-ND" H 5950 6150 60  0000 C CNN "digikey#"
+F 4 "SER4069CT-ND" H 5950 6150 60  0001 C CNN "digikey#"
 	1    5950 5850
 	1    0    0    -1  
 $EndComp
@@ -615,13 +615,13 @@ Wire Wire Line
 Connection ~ 8250 1000
 Connection ~ 9450 1000
 Wire Wire Line
-	7250 1000 7700 1000
+	7450 1000 7700 1000
 $Comp
 L Device:D_Schottky_Small D2
 U 1 1 5BD6F803
 P 7800 1000
-F 0 "D2" H 7800 705 50  0000 C CNN
-F 1 "SBR130S3-7" H 7800 796 50  0000 C CNN
+F 0 "D2" H 7800 900 50  0000 C CNN
+F 1 "SBR130S3-7" H 7800 1100 50  0000 C CNN
 F 2 "Diode_SMD:D_SOD-323_HandSoldering" V 7800 1000 50  0001 C CNN
 F 3 "~" V 7800 1000 50  0001 C CNN
 F 4 "SBR130S3-7DICT-ND" H 7800 887 50  0001 C CNN "digikey#"
@@ -777,7 +777,7 @@ F 0 "U1" H 5000 6000 60  0000 C CNN
 F 1 "STM32F302K8U6" H 4500 6000 60  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 4600 3950 60  0001 C CNN
 F 3 "DOCUMENTATION" H 4600 3950 60  0001 C CNN
-F 4 "497-14700-ND" H 4450 6100 50  0000 C CNN "digikey#"
+F 4 "497-14700-ND" H 4450 6100 50  0001 C CNN "digikey#"
 	1    4600 4450
 	1    0    0    -1  
 $EndComp
@@ -838,7 +838,7 @@ F 0 "D1" H 1625 4825 50  0000 C CNN
 F 1 "LED" H 1625 4625 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 1625 4725 50  0001 C CNN
 F 3 "" H 1625 4725 50  0000 C CNN
-F 4 "VLMTG1300-GS08CT-ND" H 1675 4525 50  0000 C CNN "digikey#"
+F 4 "VLMTG1300-GS08CT-ND" H 1675 4525 50  0001 C CNN "digikey#"
 	1    1625 4725
 	0    -1   -1   0   
 $EndComp
@@ -1062,12 +1062,12 @@ $EndComp
 $Comp
 L power:+5V #PWR0108
 U 1 1 5E459C00
-P 7250 1000
-F 0 "#PWR0108" H 7250 850 50  0001 C CNN
-F 1 "+5V" H 7265 1173 50  0000 C CNN
-F 2 "" H 7250 1000 50  0001 C CNN
-F 3 "" H 7250 1000 50  0001 C CNN
-	1    7250 1000
+P 7450 1000
+F 0 "#PWR0108" H 7450 850 50  0001 C CNN
+F 1 "+5V" H 7465 1173 50  0000 C CNN
+F 2 "" H 7450 1000 50  0001 C CNN
+F 3 "" H 7450 1000 50  0001 C CNN
+	1    7450 1000
 	1    0    0    -1  
 $EndComp
 Text Label 5450 3100 0    60   ~ 0
