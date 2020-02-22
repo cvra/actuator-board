@@ -1,4 +1,4 @@
-update=2020 February 16, Sunday 17:02:50
+update=2020 February 22, Saturday 14:53:51
 version=1
 last_client=kicad
 [cvpcb]
@@ -39,6 +39,8 @@ TrackWidth1=0.1524
 TrackWidth2=0.16
 TrackWidth3=0.2
 TrackWidth4=0.25
+TrackWidth5=0.5
+TrackWidth6=1
 ViaDiameter1=0.5
 ViaDrill1=0.2
 ViaDiameter2=0.5

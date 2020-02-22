@@ -266,7 +266,7 @@ F 3 "" H 5950 6250 50  0000 C CNN
 	1    5950 6250
 	1    0    0    -1  
 $EndComp
-Text Label 5450 4600 0    60   ~ 0
+Text Label 5450 4850 0    60   ~ 0
 LED
 $Comp
 L power:VCC #PWR04
@@ -897,9 +897,9 @@ Text Label 5450 5100 0    60   ~ 0
 SPI_MISO
 Text Label 5450 5000 0    60   ~ 0
 SPI_SCK
-Text Label 5450 4850 0    60   ~ 0
-SPI_CS1
 Text Label 5450 3900 0    60   ~ 0
+SPI_CS1
+Text Label 5450 4600 0    60   ~ 0
 SPI_CS2
 $Comp
 L Device:R_Small R6
