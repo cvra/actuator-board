@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/mi/workspace/CVRA/actuator-board/actuator-board.sch)
-    (date "2020 February 22, Saturday 14:30:33")
+    (date "2020 February 22, Saturday 17:27:49")
     (tool "Eeschema (5.1.4-0-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -139,7 +139,7 @@
       (tstamp 56D60C4F))
     (comp (ref U2)
       (value MCP1703)
-      (footprint Package_TO_SOT_SMD:SOT-23_Handsoldering)
+      (footprint Package_TO_SOT_SMD:SOT-23)
       (fields
         (field (name digikey#) MCP1703T-3302E/CBCT-ND))
       (libsource (lib _linear-regulators) (part MCP1703) (description ""))
