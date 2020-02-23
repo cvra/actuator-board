@@ -541,25 +541,25 @@ Connection ~ 7250 3200
 $Comp
 L Connector_Generic:Conn_01x03 J9
 U 1 1 5E4FD67B
-P 4900 5350
-F 0 "J9" H 4980 5392 50  0000 L CNN
-F 1 "Servo" H 4980 5301 50  0000 L CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 4900 5350 50  0001 C CNN
-F 3 "~" H 4900 5350 50  0001 C CNN
-F 4 "WM7621CT-ND" H 4900 5350 50  0001 C CNN "digikey#"
-	1    4900 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J10
-U 1 1 5E50039E
 P 4900 5900
-F 0 "J10" H 4980 5942 50  0000 L CNN
+F 0 "J9" H 4980 5942 50  0000 L CNN
 F 1 "Servo" H 4980 5851 50  0000 L CNN
 F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 4900 5900 50  0001 C CNN
 F 3 "~" H 4900 5900 50  0001 C CNN
 F 4 "WM7621CT-ND" H 4900 5900 50  0001 C CNN "digikey#"
 	1    4900 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J10
+U 1 1 5E50039E
+P 4900 5350
+F 0 "J10" H 4980 5392 50  0000 L CNN
+F 1 "Servo" H 4980 5301 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0371_1x03-1MP_P1.25mm_Horizontal" H 4900 5350 50  0001 C CNN
+F 3 "~" H 4900 5350 50  0001 C CNN
+F 4 "WM7621CT-ND" H 4900 5350 50  0001 C CNN "digikey#"
+	1    4900 5350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line

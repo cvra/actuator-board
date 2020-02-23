@@ -489,25 +489,10 @@ F 3 "" H 8000 5650 50  0000 C CNN
 	1    8000 5650
 	1    0    0    -1  
 $EndComp
-$Comp
-L _logo:CVRA_logo #G1
-U 1 1 5BCDA49A
-P 10150 6850
-F 0 "#G1" H 10150 6682 60  0001 C CNN
-F 1 "CVRA_logo" H 10150 7018 60  0001 C CNN
-F 2 "_logo:CVRA-logo-small" H 10150 6850 50  0001 C CNN
-F 3 "" H 10150 6850 50  0001 C CNN
-	1    10150 6850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5350 3100 5450 3100
 Wire Wire Line
 	5450 3200 5350 3200
-Text Label 6150 4000 0    60   ~ 0
-SERVO1
-Text Label 6150 4100 0    60   ~ 0
-SERVO2
 Text Label 5450 3800 0    60   ~ 0
 PUMP2
 Text Label 5450 3200 0    60   ~ 0
@@ -1087,6 +1072,21 @@ F 1 "10nF" H 3375 4250 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3388 4200 50  0001 C CNN
 F 3 "" H 3350 4350 50  0000 C CNN
 	1    3350 4350
+	1    0    0    -1  
+$EndComp
+Text Label 6150 4000 0    60   ~ 0
+SERVO2
+Text Label 6150 4100 0    60   ~ 0
+SERVO1
+$Comp
+L _logo:CVRA_logo #G1
+U 1 1 5BCDA49A
+P 10150 6850
+F 0 "#G1" H 10150 6682 60  0001 C CNN
+F 1 "CVRA_logo" H 10150 7018 60  0001 C CNN
+F 2 "_logo:CVRA-logo-small" H 10150 6850 50  0001 C CNN
+F 3 "" H 10150 6850 50  0001 C CNN
+	1    10150 6850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
