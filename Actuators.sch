@@ -61,30 +61,30 @@ SOLENOID_IN2
 Text HLabel 3850 2750 0    50   Input ~ 0
 SOLENOID_IN1
 $Comp
-L Device:CP C?
+L Device:C_Small C?
 U 1 1 5E3A79F5
-P 3350 5500
+P 3350 5450
 AR Path="/5E3A79F5" Ref="C?"  Part="1" 
 AR Path="/5E1FB153/5E3A79F5" Ref="C17"  Part="1" 
-F 0 "C17" H 3468 5546 50  0000 L CNN
-F 1 "10uF" H 3468 5455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 3388 5350 50  0001 C CNN
-F 3 "~" H 3350 5500 50  0001 C CNN
-F 4 "399-7442-1-ND" H 3350 5500 50  0001 C CNN "digikey#"
-	1    3350 5500
+F 0 "C17" H 3468 5496 50  0000 L CNN
+F 1 "10uF" H 3468 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3388 5300 50  0001 C CNN
+F 3 "~" H 3350 5450 50  0001 C CNN
+F 4 "399-7442-1-ND" H 3350 5450 50  0001 C CNN "digikey#"
+	1    3350 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E3A79FB
-P 3350 5650
+P 3350 5550
 AR Path="/5E3A79FB" Ref="#PWR?"  Part="1" 
 AR Path="/5E1FB153/5E3A79FB" Ref="#PWR035"  Part="1" 
-F 0 "#PWR035" H 3350 5400 50  0001 C CNN
-F 1 "GND" H 3355 5477 50  0000 C CNN
-F 2 "" H 3350 5650 50  0001 C CNN
-F 3 "" H 3350 5650 50  0001 C CNN
-	1    3350 5650
+F 0 "#PWR035" H 3350 5300 50  0001 C CNN
+F 1 "GND" H 3355 5377 50  0000 C CNN
+F 2 "" H 3350 5550 50  0001 C CNN
+F 3 "" H 3350 5550 50  0001 C CNN
+	1    3350 5550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -262,14 +262,14 @@ Wire Notes Line
 Text Notes 7600 3800 0    50   ~ 0
 Actuator 2\n(1A max)
 $Comp
-L _power:DRV8847_TSSOP U6
+L _power:DRV8847_HTSSOP U6
 U 1 1 5E3FBC0B
 P 4550 3050
 F 0 "U6" H 4100 3600 50  0000 C CNN
 F 1 "DRV8847_TSSOP" H 4900 3600 50  0000 C CNN
-F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4550 3000 50  0001 C CNN
+F 2 "Package_SO:TSSOP-16-1EP_4.4x5mm_P0.65mm" H 4550 3000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/drv8847.pdf" H 4550 3000 50  0001 C CNN
-F 4 "296-53425-1-ND" H 4550 3050 50  0001 C CNN "digikey#"
+F 4 "" H 4550 3050 50  0001 C CNN "digikey#"
 	1    4550 3050
 	1    0    0    -1  
 $EndComp
@@ -379,7 +379,7 @@ F 3 "" H 3700 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C?
+L Device:C_Small C?
 U 1 1 5E4761AC
 P 5500 2200
 AR Path="/5E4761AC" Ref="C?"  Part="1" 
@@ -562,4 +562,11 @@ F 4 "WM7621CT-ND" H 4900 5900 50  0001 C CNN "digikey#"
 	1    4900 5900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5500 2100 5500 2050
+Wire Wire Line
+	5500 2300 5500 2350
+Wire Wire Line
+	4450 3750 4550 3750
+Connection ~ 4550 3750
 $EndSCHEMATC

@@ -155,17 +155,6 @@ F 3 "" H 3100 3800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C3
-U 1 1 56D6293B
-P 3500 4350
-F 0 "C3" H 3525 4450 50  0000 L CNN
-F 1 "0.1uF" H 3525 4250 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3538 4200 50  0001 C CNN
-F 3 "" H 3500 4350 50  0000 C CNN
-	1    3500 4350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 56D62D2B
 P 3350 3800
@@ -390,9 +379,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 1600 1750 1600
 Wire Wire Line
-	3750 4300 3750 4500
+	3800 4300 3800 4500
 Wire Wire Line
-	3850 4300 3750 4300
+	3850 4300 3800 4300
 Connection ~ 3350 4000
 Wire Wire Line
 	3100 4000 3100 3950
@@ -532,10 +521,6 @@ Text Notes 1150 7400 0    60   ~ 0
 Features:\n2x pump half bridge\n2x solenoid half bridge\n2x vacuum sensor SPI\n2 Servo PWM\n2 analog input\n1 digital input
 Wire Wire Line
 	3400 3100 3550 3100
-Wire Wire Line
-	3250 4500 3500 4500
-Wire Wire Line
-	3250 4200 3500 4200
 Wire Wire Line
 	5350 3700 5450 3700
 Text Label 5450 3700 0    60   ~ 0
@@ -688,12 +673,6 @@ F 3 "" H 4050 1550 50  0001 C CNN
 	1    4050 1550
 	1    0    0    -1  
 $EndComp
-Connection ~ 3500 4200
-Wire Wire Line
-	3500 4200 3850 4200
-Connection ~ 3500 4500
-Wire Wire Line
-	3500 4500 3750 4500
 $Comp
 L power:GND #PWR012
 U 1 1 5E2B5273
@@ -1072,4 +1051,42 @@ F 3 "" H 7450 1000 50  0001 C CNN
 $EndComp
 Text Label 5450 3100 0    60   ~ 0
 ANALOG1
+$Comp
+L Device:C C20
+U 1 1 5E52DAB3
+P 3600 4350
+F 0 "C20" H 3625 4450 50  0000 L CNN
+F 1 "1uF" H 3625 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3638 4200 50  0001 C CNN
+F 3 "" H 3600 4350 50  0000 C CNN
+	1    3600 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 3600 4200
+Wire Wire Line
+	3600 4200 3850 4200
+Connection ~ 3600 4500
+Wire Wire Line
+	3600 4500 3800 4500
+Wire Wire Line
+	3250 4500 3350 4500
+Connection ~ 3350 4500
+Wire Wire Line
+	3350 4500 3600 4500
+Wire Wire Line
+	3250 4200 3350 4200
+Connection ~ 3350 4200
+Wire Wire Line
+	3350 4200 3600 4200
+$Comp
+L Device:C C3
+U 1 1 56D6293B
+P 3350 4350
+F 0 "C3" H 3375 4450 50  0000 L CNN
+F 1 "10nF" H 3375 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3388 4200 50  0001 C CNN
+F 3 "" H 3350 4350 50  0000 C CNN
+	1    3350 4350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
