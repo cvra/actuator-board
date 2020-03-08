@@ -2340,6 +2340,11 @@
       (net 32 /SPI_MOSI))
     (pad 1 smd rect (at 3.37 -4.2) (size 0.7 0.65) (layers B.Cu B.Paste B.Mask)
       (net 35 /SPI_CS1))
+    (model ${KIPRJMOD}/3dshapes/MPR.stp
+      (offset (xyz -3.9 -7.7 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module _sensors:MPR-AbsoluteRef (layer F.Cu) (tedit 5E49210C) (tstamp 5E498634)
@@ -2394,6 +2399,11 @@
       (net 49 "Net-(U5-Pad11)"))
     (pad 12 smd rect (at 4.2 3.37 180) (size 0.65 0.7) (layers F.Cu F.Paste F.Mask)
       (net 1 VCC))
+    (model ${KIPRJMOD}/3dshapes/MPR.stp
+      (offset (xyz -3.9 -7.7 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Package_TO_SOT_SMD:SOT-23-8 (layer F.Cu) (tedit 5A02FF57) (tstamp 5E52DA2F)
