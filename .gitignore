@@ -1,0 +1,7 @@
+*.bak
+*.pdf
+
+# for BOM
+actuator-board.xml
+actuator-board.xlsx
+

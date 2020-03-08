@@ -1,21 +1,25 @@
-## CAN IO board
+## CVRA Actuator Board
 
 __Features:__
 
 - STM32F302K8U6 (64K Flash, 16K RAM)
-- IOs _(not all funcitons can be used at the same time)_
-    - 4 Digital input
-    - 4 PWM output
+- IOs
+    - 1 Digital input
+    - 2 Analog input
+    - 2 Servo PWM
+    - 2 motor outputs for vacuum pump
 - CAN interface with two 4pin Molex PicoBlade for daisy chaining
 - Debug connector (7pin Molex PicoBlade)
     - SWD
     - UART
 
-__RevB change log:__
+![Board Rendering](https://raw.githubusercontent.com/cvra/actuator-board/master/img/actuator-board.png)
+![Board Dimensions](https://raw.githubusercontent.com/cvra/actuator-board/master/img/actuator-board-dimensions.png)
 
-- Replace soldering pads by connectors (2x 8 pin Molex PicoBlade)
-- Reduce number of exposed IO pin (4 digital input and 4 PWM output)
-- Protect against 5V voltage polarity inversion.
+## Generating Digikey BOM using Kicost
 
-![Board Rendering](https://raw.githubusercontent.com/cvra/can-io-board/master/can-io-RevB.png)
-![Board dimensions](https://raw.githubusercontent.com/cvra/can-io-board/master/can-io-RevB-dimensions.png)
+Generate the Bom in XML format from KiCAD, then:
+
+```
+kicost -i actuator-board.xml --include digikey
+```
