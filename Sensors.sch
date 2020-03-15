@@ -395,7 +395,7 @@ F 0 "J2" H 4630 4742 50  0000 L CNN
 F 1 "Conn_01x06" H 4630 4651 50  0000 L CNN
 F 2 "Connector_Molex:Molex_PicoBlade_53261-0671_1x06-1MP_P1.25mm_Horizontal" H 4550 4750 50  0001 C CNN
 F 3 "~" H 4550 4750 50  0001 C CNN
-F 4 "WM7626CT-ND" H 4550 4750 50  0001 C CNN "digikey#"
+F 4 "WM7624CT-ND" H 4550 4750 50  0001 C CNN "digikey#"
 	1    4550 4750
 	1    0    0    -1  
 $EndComp
